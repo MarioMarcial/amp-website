@@ -1,0 +1,158 @@
+import type { Instrument } from '../types/instrument.types';
+
+const levels: Instrument['levels'] = ['Principiante', 'Intermedio', 'Avanzado'];
+const ages: Instrument['ages'] = ['Niños', 'Jóvenes', 'Adultos'];
+
+export const instruments: Instrument[] = [
+  {
+    id: '1-guitarra-acustica',
+    name: 'Guitarra Acústica',
+    description: [
+      'Las clases son completamente progresivas, permitiéndote aprender los aspectos de la guitarra de manera fácil y divertida.',
+      'Para aprender este instrumento, no necesitas tener uno propio desde el principio. En AMP, te proporcionamos el instrumento para que puedas tomar tus clases sin problemas.',
+    ],
+    subjects: [
+      'Lectura y Escritura',
+      'Escalas Mayores y Menores',
+      'Improvisación',
+      'Armonías',
+      'Análisis Auditivo',
+      'Estudio con metrónomo',
+      'Formas musicales',
+    ],
+    levels,
+    ages,
+    type: 'course',
+  },
+  {
+    id: '2-guitarra-electrica',
+    name: 'Guitarra Eléctrica',
+    description: [
+      'Las clases son completamente progresivas, permitiéndote aprender los aspectos de la guitarra de manera fácil y divertida.',
+      'Para aprender este instrumento, no necesitas tener uno propio desde el principio. En AMP, te proporcionamos el instrumento para que puedas tomar tus clases sin problemas.',
+    ],
+    subjects: [
+      'Lectura y Escritura',
+      'Escalas Mayores y Menores',
+      'Improvisación',
+      'Armonías',
+      'Análisis Auditivo',
+      'Estudio con metrónomo',
+      'Formas musicales',
+    ],
+    levels,
+    ages,
+    type: 'course',
+  },
+  {
+    id: '3-piano',
+    name: 'Piano',
+    description: [
+      'Las clases son totalmente progresivas y abordan diversos temas teórico-prácticos para asegurar un aprendizaje óptimo.',
+      'No necesitas contar con tu propio instrumento desde el inicio. Nosotros te proporcionamos uno para tus clases, y más adelante, podrás decidir cuál comprar.',
+      'La constancia y la paciencia son clave en todos los instrumentos. Con dedicación, perfeccionarás tus habilidades y tu talento crecerá exponencialmente.',
+    ],
+    subjects: [
+      'Lectura y Escritura',
+      'Coordinación ojo-mano',
+      'Escalas, acordes y arpegios',
+      'Análisis auditivo',
+      'Improvisación',
+      'Repertorio',
+    ],
+    levels,
+    ages,
+    type: 'course',
+  },
+  {
+    id: '4-canto',
+    name: 'Canto',
+    description: [
+      'Nuestras clases son predominantemente prácticas, enfocándose en el uso consciente de los músculos del cuerpo.',
+      'Una de las técnicas más efectivas para nuestros alumnos es la técnica clásica de ópera. Académicamente, esta técnica es la más completa y confiable para comenzar en el canto. Una vez dominada, te será mucho más fácil aprender otros géneros, ya que tendrás una base sólida para cantar.',
+    ],
+    subjects: [
+      'Apoyo',
+      'Colocación',
+      'Vocalización',
+      'Cuidado de la voz',
+      'Afinación',
+      'Interpretación',
+      'Repertorio',
+      'Solfeo',
+    ],
+    levels,
+    ages,
+    type: 'course',
+  },
+  {
+    id: '5-bateria',
+    name: 'Batería',
+    description: [
+      'Para esta clase, necesitarás adquirir tus propias baquetas, siguiendo la medida que el profesor te sugiera, y un cuaderno para apuntar tus ejercicios.',
+      'Muchos ejercicios también estarán disponibles en formato digital.',
+    ],
+    subjects: [
+      'Lectura y Escritura',
+      'Coordinación',
+      'Improvisación',
+      'Práctica con metrónomo',
+      'Técnica de manos y pies',
+      'Análisis auditivo',
+    ],
+    levels,
+    ages,
+    type: 'course',
+  },
+  {
+    id: '6-bajo',
+    name: 'Bajo',
+    description: [
+      'Nuestro programa para bajo eléctrico está basado en un aprendizaje progresivo y sistemático, paso a paso lograrás conectarte completamente con tu instrumento, e interpretar el repertorio deseado, así como también, conocer y ejecutar géneros como Blues, Funky, Bebop, Swing, Rock, Pop, Jazz, etc.',
+    ],
+    subjects: ['Notación Musical', 'Intervalos', 'Rítmica y Ejecución'],
+    levels,
+    ages,
+    type: 'course',
+  },
+  {
+    id: '7-violin',
+    name: 'Violín',
+    description: [
+      'Nuestra clase combina teoría y práctica de manera equilibrada, brindando al alumno las herramientas necesarias para alcanzar su objetivo de dominar el instrumento de manera efectiva y accesible, incluso desde edades tempranas.',
+      'Con un enfoque teórico sólido y actividades prácticas dinámicas, nuestros estudiantes desarrollan una comprensión profunda y duradera del instrumento, estableciendo una base sólida para su futuro musical.',
+    ],
+    subjects: [
+      'Repertorio',
+      'Solfeo',
+      'Apreciación musical',
+      'Desenvolvimiento escénico',
+      'Entrenamiento auditivo',
+      'Práctica con metrónomo',
+      'Técnica de Suzuki',
+      'Ejercicios para destreza digital',
+    ],
+    levels,
+    ages,
+    type: 'course',
+  },
+  {
+    id: '8-saxofon',
+    name: 'Saxofón',
+    description: [
+      'Nuestra clase de saxofón combina teoría y práctica, ofreciendo instrucción de primera calidad para descubrir la belleza de este instrumento.',
+      'No es necesario tener tu propio saxofón para empezar. Puedes utilizar uno de los que proporcionamos en clase. Solo necesitas traer tu boquilla y tu caña.',
+    ],
+    subjects: [
+      'Respiración / diafragma',
+      'La caña y la boquilla',
+      'Notas largas',
+      'Postura',
+      'Afinación',
+      'Limpieza',
+    ],
+    levels,
+    ages,
+    type: 'course',
+  },
+];
