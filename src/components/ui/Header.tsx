@@ -1,3 +1,9 @@
+import { Nav } from './Nav';
+
 export const Header = () => {
-  return <div>Header</div>;
+  return (
+    <header className="bg-graydark">
+      <Nav />
+    </header>
+  );
 };

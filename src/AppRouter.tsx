@@ -22,7 +22,7 @@ export const AppRouter = () => {
         <Route
           element={
             <Suspense fallback={<div>Cargando...</div>}>
-              <PagesLayout />
+              <HomeLayout />
             </Suspense>
           }
         >

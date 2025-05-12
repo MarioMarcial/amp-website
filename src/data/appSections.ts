@@ -1,6 +1,6 @@
-import type { appSection } from '../types/appSection.types';
+import type { AppSection } from '../types/appSection.types';
 
-export const appSections: appSection[] = [
+export const appSections: AppSection[] = [
   { name: 'Inicio', path: '/' },
   { name: 'Instrumentos', path: '/instrumentos' },
   { name: 'Ventajas', path: '/ventajas' },
