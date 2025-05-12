@@ -1,10 +1,10 @@
-import { ButtonHero } from '../../../components/buttons';
-import { Icons } from './../../../assets/icons/Icons';
+import { ButtonHero } from './../ui/buttons';
+import { FaArrowRightLong } from 'react-icons/fa6';
 
 export const Hero = () => {
   return (
     <>
-      <section className="bg-white dark:bg-gray-900">
+      <section className="bg-darkrich">
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto md:py-15 md:gap-5 md:grid-cols-8 lg:gap-8 xl:gap-0 lg:grid-cols-12">
           <div className="mx-auto text-center place-self-center md:mx-0 md:text-start md:col-span-4 lg:mr-auto lg:col-span-7">
             <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:max-w-md xl:max-w-xl xl:text-6xl dark:text-white">
@@ -17,7 +17,7 @@ export const Hero = () => {
               talento al máximo.
             </p>
             <ButtonHero
-              icon={Icons.RightArrow}
+              icon={FaArrowRightLong}
               label="Comenzar Viaje"
               url="/contacto"
               displayStyles="hidden md:inline-flex"
@@ -28,9 +28,10 @@ export const Hero = () => {
               src="src\assets\images\hero-mobile.png"
               className="w-full max-w-90 mx-auto md:max-w-full sm:mask-radial-to-center sm:mask-radial-from-68% sm:mask-radial-to-74% md:mask-radial-from-69% md:mask-radial-to-70%"
               alt="hero imagen"
+              loading="lazy"
             />
             <ButtonHero
-              icon={Icons.RightArrow}
+              icon={FaArrowRightLong}
               label="Comenzar Viaje"
               url="/contacto"
               displayStyles="inline-flex md:hidden"

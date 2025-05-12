@@ -1,6 +1,6 @@
 import type { ElementType } from 'react';
 
-type Color = 'primary' | 'secondary' | 'dark' | 'white' | 'graydark';
+type Color = 'primary' | 'secondary' | 'darkrich' | 'white' | 'graydark';
 
 type ButtonPrimaryProps = {
   label: string;
@@ -15,7 +15,7 @@ export const Button = ({
   url,
   icon: Icon,
   bgColor = 'primary',
-  textColor = 'dark',
+  textColor = 'darkrich',
 }: ButtonPrimaryProps) => {
   return (
     <a

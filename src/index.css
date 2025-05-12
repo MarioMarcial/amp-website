@@ -5,7 +5,8 @@
 @theme {
   --font-monserrat: 'Montserrat', sans-serif;
   --font-inter: 'Inter', sans-serif;
-  --color-dark: oklch(0.15 0 0);
+  --color-darkrich: oklch(0.15 0.0218 274.75);
+  --color-darkrich-300: oklch(0.08 0.0218 274.75);
   --color-graydark: oklch(0.22 0 0);
   --color-graydark-300: oklch(0.18 0 0);
   --color-primary: oklch(0.87 0.148144 202.8754);
