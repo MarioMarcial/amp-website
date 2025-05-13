@@ -1,5 +1,6 @@
 import { ButtonHero } from './../ui/buttons';
 import { FaArrowRightLong } from 'react-icons/fa6';
+import heroImage from './../../assets/images/hero-mobile.png';
 
 export const Hero = () => {
   return (
@@ -25,7 +26,7 @@ export const Hero = () => {
           </div>
           <div className="text-center md:text-start md:col-span-4 lg:mt-0 lg:col-span-5 lg:flex">
             <img
-              src="src\assets\images\hero-mobile.png"
+              src={heroImage}
               className="w-full max-w-90 mx-auto md:max-w-full sm:mask-radial-to-center sm:mask-radial-from-68% sm:mask-radial-to-74% md:mask-radial-from-69% md:mask-radial-to-70%"
               alt="hero imagen"
               loading="lazy"

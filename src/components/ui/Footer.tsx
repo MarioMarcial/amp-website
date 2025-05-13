@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import { IconContext } from 'react-icons';
 
 import { appSections, contactMethods, socialMedia } from '../../data';
+import ampLogo from './../../assets/images/logo.png';
 
 export const Footer = () => {
   return (
@@ -12,7 +13,7 @@ export const Footer = () => {
             <div className="mb-10 md:mb-0">
               <Link to={'/'} className="flex flex-col items-center">
                 <img
-                  src="src\assets\images\logo.png"
+                  src={ampLogo}
                   className="h-20 object-contain md:h-45"
                   alt="FlowBite Logo"
                   loading="lazy"

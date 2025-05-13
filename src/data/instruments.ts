@@ -5,7 +5,7 @@ const ages: Instrument['ages'] = ['Niños', 'Jóvenes', 'Adultos'];
 
 export const instruments: Instrument[] = [
   {
-    id: '1-guitarra-acustica',
+    id: 'guitarra-acustica',
     name: 'Guitarra Acústica',
     description: [
       'Las clases son completamente progresivas, permitiéndote aprender los aspectos de la guitarra de manera fácil y divertida.',
@@ -25,7 +25,7 @@ export const instruments: Instrument[] = [
     type: 'course',
   },
   {
-    id: '2-guitarra-electrica',
+    id: 'guitarra-electrica',
     name: 'Guitarra Eléctrica',
     description: [
       'Las clases son completamente progresivas, permitiéndote aprender los aspectos de la guitarra de manera fácil y divertida.',
@@ -45,7 +45,7 @@ export const instruments: Instrument[] = [
     type: 'course',
   },
   {
-    id: '3-piano',
+    id: 'piano',
     name: 'Piano',
     description: [
       'Las clases son totalmente progresivas y abordan diversos temas teórico-prácticos para asegurar un aprendizaje óptimo.',
@@ -65,7 +65,7 @@ export const instruments: Instrument[] = [
     type: 'course',
   },
   {
-    id: '4-canto',
+    id: 'canto',
     name: 'Canto',
     description: [
       'Nuestras clases son predominantemente prácticas, enfocándose en el uso consciente de los músculos del cuerpo.',
@@ -86,7 +86,7 @@ export const instruments: Instrument[] = [
     type: 'course',
   },
   {
-    id: '5-bateria',
+    id: 'bateria',
     name: 'Batería',
     description: [
       'Para esta clase, necesitarás adquirir tus propias baquetas, siguiendo la medida que el profesor te sugiera, y un cuaderno para apuntar tus ejercicios.',
@@ -105,7 +105,7 @@ export const instruments: Instrument[] = [
     type: 'course',
   },
   {
-    id: '6-bajo',
+    id: 'bajo',
     name: 'Bajo',
     description: [
       'Nuestro programa para bajo eléctrico está basado en un aprendizaje progresivo y sistemático, paso a paso lograrás conectarte completamente con tu instrumento, e interpretar el repertorio deseado, así como también, conocer y ejecutar géneros como Blues, Funky, Bebop, Swing, Rock, Pop, Jazz, etc.',
@@ -116,7 +116,7 @@ export const instruments: Instrument[] = [
     type: 'course',
   },
   {
-    id: '7-violin',
+    id: 'violin',
     name: 'Violín',
     description: [
       'Nuestra clase combina teoría y práctica de manera equilibrada, brindando al alumno las herramientas necesarias para alcanzar su objetivo de dominar el instrumento de manera efectiva y accesible, incluso desde edades tempranas.',
@@ -137,7 +137,7 @@ export const instruments: Instrument[] = [
     type: 'course',
   },
   {
-    id: '8-saxofon',
+    id: 'saxofon',
     name: 'Saxofón',
     description: [
       'Nuestra clase de saxofón combina teoría y práctica, ofreciendo instrucción de primera calidad para descubrir la belleza de este instrumento.',

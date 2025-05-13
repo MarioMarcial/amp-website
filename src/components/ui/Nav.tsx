@@ -4,6 +4,7 @@ import { appSections } from '../../data';
 import { IoMdMenu } from 'react-icons/io';
 import { IoClose } from 'react-icons/io5';
 import { Transition } from '@headlessui/react';
+import ampLogo from './../../assets/images/logo.png';
 
 export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ export const Nav = () => {
           className="flex space-x-2 rtl:space-x-reverse justify-start md:space-x-0"
         >
           <img
-            src="src/assets/images/logo.png"
+            src={ampLogo}
             className="h-9  object-contain self-start"
             alt="Arte Musical Puebla Logo"
           />
