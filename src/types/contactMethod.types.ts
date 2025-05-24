@@ -1,8 +1,10 @@
 import type { IconType } from 'react-icons';
 
 export type ContactMethod = {
-  type: 'email' | 'phone' | 'location';
-  url: string;
+  name: string;
   label: string;
+  href: string;
   icon: IconType;
+  type: 'email' | 'phone' | 'location' | 'schedule';
+  details: string[];
 };

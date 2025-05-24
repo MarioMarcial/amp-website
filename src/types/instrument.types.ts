@@ -1,9 +1,17 @@
+export type LevelBase = 'Principiante' | 'Intermedio' | 'Avanzado';
+
+export type LevelBaseData = {
+  level: LevelBase;
+  description: string;
+};
+
+export type Level = LevelBaseData & {
+  topics: string[];
+};
+
 export type Instrument = {
-  ages: string[];
-  description: string[];
   id: string;
-  levels: string[];
   name: string;
-  subjects: string[];
-  type: string;
+  description: string;
+  levels: Level[];
 };

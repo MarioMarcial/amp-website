@@ -3,4 +3,12 @@ export type Testimonial = {
   name: string;
   img: string;
   review: string;
+  instrument:
+    | 'Canto'
+    | 'Violin'
+    | 'Batería'
+    | 'Bajo'
+    | 'Saxofón'
+    | 'Piano'
+    | 'Guitarra';
 };

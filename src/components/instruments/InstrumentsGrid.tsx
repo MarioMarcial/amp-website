@@ -1,30 +1,32 @@
 import { Link } from 'react-router';
-import { instruments } from '../../data/instruments';
+import { instrumentsData } from '../../data/instrumentsData';
 
 export const InstrumentsGrid = () => {
   return (
     <>
-      <section className="max-w-screen-xl mx-auto md:pb-6 flex flex-wrap justify-items-center gap-y-1 shadow-sm bg-transparent md:justify-center">
-        {instruments.map((instrument) => (
+      <div className="flex flex-wrap justify-items-center gap-y-1 bg-transparent md:gap-y-8 md:rounded-lg md:overflow-hidden">
+        {instrumentsData.map((instrument) => (
           <Link
             key={instrument.id}
-            to={`/instrumentos/${instrument.id}#`}
-            className="group inline-block w-1/2 rounded-lg overflow-hidden py-5 bg-transparent hover:bg-linear-to-br hover:from-primary-600 hover:via-darkrich hover:to-secondary-600 transition-colors duration-500 ease-out md:w-1/4"
+            to={`/instrumentos/${instrument.id}`}
+            className="group py-5 xl:py-7 w-1/2 md:w-1/3 rounded-lg md:rounded-none overflow-hidden bg-transparent border-1 border-transparent hover:border-gray-900 hover:bg-gray-dark hover:shadow-xl hover:shadow-dark-rich-200 transition-all duration-500"
           >
             <div className="flex flex-col items-center">
-              <img
-                className="w-30 h-30 mb-3 rounded-full shadow-lg lg:w-40 xl:w-42 md:object-cover md:h-auto"
-                src={`/images/${instrument.id}.jpg`}
-                alt={`${instrument.name}`}
-                loading="lazy"
-              />
-              <h5 className="mb-1 text-lg text-center px-6 font-bold text-graylight group-hover:text-white transition-colors duration-250 md:justify-self-end">
+              <div className="mb-3 inline-block overflow-hidden rounded-full relative w-30 h-30 md:w-36 md:h-36 2xl:w-40 2xl:h-40 ">
+                <img
+                  className="w-auto h-full md:brightness-95 object-cover  md:group-hover:brightness-100 transition-all duration-500 pointer-events-none"
+                  src={`/images/${instrument.id}.jpg`}
+                  alt={`${instrument.name} imagen`}
+                  loading="lazy"
+                />
+              </div>
+              <h5 className="mb-1 text-lg text-center px-6 font-bold text-gray-light group-hover:text-white transition-colors duration-500 md:justify-self-end">
                 {instrument.name}
               </h5>
             </div>
           </Link>
         ))}
-      </section>
+      </div>
     </>
   );
 };

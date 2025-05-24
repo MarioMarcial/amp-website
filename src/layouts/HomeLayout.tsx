@@ -7,7 +7,7 @@ export default function HomeLayout() {
   return (
     <>
       <Header />
-      <main className="bg-graydark">
+      <main className="bg-dark-rich-100">
         <Outlet />
       </main>
       <Footer />

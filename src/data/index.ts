@@ -1,6 +1,7 @@
-export { advantages } from './advantages';
-export { appSections } from './appSections';
-export { contactMethods } from './contactMethods';
-export { instruments } from './instruments';
-export { socialMedia } from './socialMedia';
-export { testimonials } from './testimonials';
+export { advantagesData } from './advantagesData';
+export { agesData } from './agesData';
+export { appSectionsData } from './appSectionsData';
+export { contactMethodsData } from './contactMethodsData';
+export { instrumentsData } from './instrumentsData';
+export { socialMediaData } from './socialMediaData';
+export { testimonialsData } from './testimonialsData';
