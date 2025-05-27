@@ -14,7 +14,7 @@ export const Footer = () => {
             <div className="mb-6 md:mb-0">
               <Link to={'/'} className="flex flex-col items-center">
                 <img
-                  src="/images/amp-logo.png"
+                  src={`${import.meta.env.BASE_URL}images/amp-logo.png`}
                   className="h-20 object-contain md:h-30 pointer-events-none md:self-center"
                   alt="FlowBite Logo"
                   loading="lazy"

@@ -11,14 +11,14 @@ export const TestimonialsGrid = () => {
           >
             <div className="w-30 mx-auto">
               <img
-                src={`/images/${testimonial.img}.jpg`}
+                src={`${import.meta.env.BASE_URL}images/${testimonial.img}.jpg`}
                 className="rounded-full object-cover object-center pointer-events-none"
                 alt={`${testimonial.name} imagen`}
               />
             </div>
             <div className="text-center">
               <img
-                src="/images/review-stars.png"
+                src={`${import.meta.env.BASE_URL}images/review-stars.png`}
                 className="w-1/3 mx-auto"
                 alt="calificación imagen"
               />

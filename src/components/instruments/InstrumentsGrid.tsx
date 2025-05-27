@@ -15,7 +15,7 @@ export const InstrumentsGrid = () => {
               <div className="mb-3 inline-block overflow-hidden rounded-full relative w-26 h-26 md:w-33 md:h-33 2xl:w-36 2xl:h-36">
                 <img
                   className="w-auto h-full md:brightness-90 object-cover md:group-hover:brightness-100   transition-all duration-500 pointer-events-none"
-                  src={`/images/${instrument.id}.jpg`}
+                  src={`${import.meta.env.BASE_URL}images/${instrument.id}.jpg`}
                   alt={`${instrument.name} imagen`}
                   loading="lazy"
                 />

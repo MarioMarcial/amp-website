@@ -65,7 +65,7 @@ export default function Advantages() {
           </div>
           <div className="hidden md:block xl:-ms-10 z-0">
             <img
-              src={'/images/header.jpg'}
+              src={`${import.meta.env.BASE_URL}images/header.jpg`}
               className="overflow-hidden object-cover md:rounded-se-xl md:rounded-ee-xl xl:rounded-xl w-full md:h-full"
               alt="metodologia imagen"
               loading="lazy"

@@ -21,7 +21,7 @@ export const Nav = () => {
           className="flex items-center space-x-2 rtl:space-x-reverse"
         >
           <img
-            src="/images/amp-logo.png"
+            src={`${import.meta.env.BASE_URL}images/amp-logo.png`}
             className="h-8 object-contain pointer-events-none"
             alt="Arte Musical Puebla Logo"
           />

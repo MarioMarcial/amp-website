@@ -32,7 +32,7 @@ export const HomeHero = () => {
           </div>
           <div className="text-center md:text-start md:col-span-4 lg:mt-0 lg:col-span-5 lg:flex">
             <img
-              src="/images/hero-mobile.png"
+              src={`${import.meta.env.BASE_URL}images/hero-mobile.png`}
               className="w-full max-w-90 mx-auto md:max-w-full sm:mask-radial-to-center sm:mask-radial-from-68% sm:mask-radial-to-74% md:mask-radial-from-69% md:mask-radial-to-70%"
               alt="hero imagen"
               loading="lazy"

@@ -65,7 +65,7 @@ export default function Instrument() {
           <div className="relative rounded-t-xl overflow-hidden md:rounded-none">
             <img
               className="w-full md:h-110 xl:h-full object-cover md:rounded-xl pointer-events-none"
-              src={`/images/${instrument.id}.jpg`}
+              src={`${import.meta.env.BASE_URL}images/${instrument.id}.jpg`}
               alt={`${instrument.name} imagen`}
               loading="lazy"
             />
