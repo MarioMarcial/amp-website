@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router';
+import { Routes, Route, Navigate, HashRouter } from 'react-router';
 import {
   Home,
   Instruments,
@@ -12,7 +12,7 @@ const HomeLayout = lazy(() => import('./layouts/HomeLayout'));
 
 export const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route
           path="/"
@@ -33,6 +33,6 @@ export const AppRouter = () => {
         <Route path="/" element={<Navigate to={'/'} />} />
         <Route path="*" element={<Navigate to={'/'} />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
