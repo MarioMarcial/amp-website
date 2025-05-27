@@ -1,5 +1,5 @@
 import { contactMethodsData, socialMediaData } from '../data';
-import { ContactLeafletMap } from '../components/contact/ContactLeafletMap';
+import { ContactFAQ, ContactLeafletMap } from '../components/contact';
 import { FiMessageCircle } from 'react-icons/fi';
 import { RiExternalLinkLine } from 'react-icons/ri';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
@@ -7,22 +7,22 @@ import { HiOutlineLocationMarker } from 'react-icons/hi';
 export default function Contact() {
   return (
     <>
-      <section className="max-w-screen-xl mx-auto section-spacing grid space-y-10 md:grid-cols-2 md:gap-x-10">
-        {/* Column 1 */}
-        <div>
-          <h2 className="text-2xl font-extrabold text-gray-100 md:text-3xl mb-8 md:mb-9">
+      <div className="max-w-screen-xl mx-auto px-4 py-6 md:px-8 grid space-y-10 md:grid-cols-2 md:gap-x-10">
+        {/* 1st Column */}
+        <section>
+          <h2 className="text-2xl font-extrabold text-gray-100 mb-8 md:mb-9">
             Medios de Contacto
           </h2>
 
           {/* Whatsapp Card */}
           <div className="mb-10">
-            <div className="bg-dark-rich p-6 rounded-xl border-l-4 border-green-500">
+            <div className="bg-gray-dark p-6 rounded-xl border-l-4 border-green-500">
               <div className="flex items-start gap-4">
                 <div className="bg-green-500 p-3 rounded-full">
                   <FiMessageCircle className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">
+                  <h3 className="text-lg font-semibold mb-2 text-white">
                     WhatsApp (Respuesta Inmediata)
                   </h3>
                   <p className="text-gray-300 mb-3">
@@ -51,9 +51,7 @@ export default function Contact() {
                   <contact.icon className="h-6 w-6 text-primary-100 stroke-1" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-1 text-white">
-                    {contact.name}
-                  </h3>
+                  <h3 className="font-bold mb-1 text-white">{contact.name}</h3>
 
                   {!['location', 'schedule'].includes(contact.type) && (
                     <a
@@ -106,21 +104,21 @@ export default function Contact() {
               ))}
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Column 2 */}
-        <div>
-          <h2 className="text-2xl font-extrabold text-gray-100 md:text-3xl mb-8 md:mb-9">
+        {/* 2nd Column */}
+        <section>
+          <h2 className="text-2xl font-extrabold text-gray-100 mb-8 md:mb-9">
             Nuestra Ubicación
           </h2>
 
           {/* Map */}
-          <div className="rounded-xl overflow-hidden mb-8">
+          <div className="rounded-ss-xl rounded-se-xl overflow-hidden">
             <ContactLeafletMap />
           </div>
 
           {/* Additional Info */}
-          <div className="bg-dark-rich border-primary-400 rounded-xl">
+          <div className="bg-gray-dark border-primary-400 rounded-ee-xl rounded-es-xl">
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-4 text-primary-100">
                 Cómo llegar
@@ -171,8 +169,13 @@ export default function Contact() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
+      {/* FAQS */}
+      <div className="max-w-screen-xl mx-auto px-4 pt-2 pb-6 md:px-8 xl:pt-8 md:pb-15 border-b-2 border-gray-dark/80">
+        <ContactFAQ />
+      </div>
     </>
   );
 }

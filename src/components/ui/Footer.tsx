@@ -1,10 +1,6 @@
 import { Link, NavLink } from 'react-router';
 
-import {
-  appSectionsData,
-  contactMethodsData,
-  socialMediaData,
-} from '../../data';
+import { appMenuData, contactMethodsData, socialMediaData } from '../../data';
 
 export const Footer = () => {
   const contactMethods = contactMethodsData.filter(
@@ -12,29 +8,29 @@ export const Footer = () => {
   );
   return (
     <>
-      <footer className="px-4">
+      <footer className="px-4 md:px-8">
         <section className="bg-dark-rich-100 py-8 md:py-10">
           <div className="md:flex md:justify-evenly max-w-screen-xl mx-auto">
-            <div className="mb-8 md:mb-0">
+            <div className="mb-6 md:mb-0">
               <Link to={'/'} className="flex flex-col items-center">
                 <img
-                  src="/images/Logo-v8.png"
-                  className="h-20 object-contain md:h-35 xl:h-40 pointer-events-none"
+                  src="/images/amp-logo.png"
+                  className="h-20 object-contain md:h-30 pointer-events-none md:self-center"
                   alt="FlowBite Logo"
                   loading="lazy"
                 />
-                <span className="hidden self-center font-semibold whitespace-nowrap text-white md:inline-block md:text-md lg:text-xl">
+                <span className="hidden self-center font-extrabold uppercase whitespace-nowrap text-white md:inline-block md:text-md lg:text-lg">
                   Arte Musical Puebla
                 </span>
               </Link>
             </div>
-            <div className="grid grid-cols-1 text-center gap-8 md:gap-3 md:grid-cols-2 md:text-start justify-items-center xl:gap-6">
-              <div>
+            <div className="grid grid-cols-1 justify-items-center text-center gap-8 md:grid-cols-2 md:text-start md:gap-0 xl:gap-6">
+              <div className="">
                 <h4 className="mb-3 md:mb-6 text-sm font-semibold uppercase text-white">
                   Menú
                 </h4>
                 <ul className="font-medium space-y-3 md:space-y-4">
-                  {appSectionsData.map((item) => (
+                  {appMenuData.map((item) => (
                     <li key={item.path}>
                       <NavLink
                         to={item.path}
@@ -48,7 +44,7 @@ export const Footer = () => {
                   ))}
                 </ul>
               </div>
-              <div>
+              <div className="">
                 <h4 className="mb-3 md:mb-6 text-sm font-semibold uppercase text-white">
                   Contacto
                 </h4>

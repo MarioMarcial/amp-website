@@ -13,7 +13,7 @@ export const TabAges = () => {
         {agesData.map((ageItem) => (
           <button
             key={ageItem.id}
-            className={`inline-block w-full p-4 border-x-2 border-gray-900 focus:outline-none transition-colors duration-200 ${
+            className={`inline-block w-full p-4 border-y-2 border-s-2 border-gray-900 focus:outline-none transition-colors duration-200 cursor-pointer ${
               currentTab.id === ageItem.id
                 ? `bg-primary-100 text-dark-rich rounded-sm`
                 : `bg-transparent text-gray-400`
@@ -25,7 +25,7 @@ export const TabAges = () => {
         ))}
       </div>
 
-      <div className="mt-5 p-6 bg-dark-rich space-y-4 rounded-xl outline-1 outline-primary-400 md:mx-1 md:p-9">
+      <div className="mt-5 p-6 bg-gray-dark space-y-4 rounded-xl border border-gray-800  md:p-9">
         <h4 className="text-primary-100 font-semibold text-xl">
           {currentTab.title}
         </h4>

@@ -34,7 +34,8 @@ export default function Instrument() {
 
   return (
     <>
-      <div className="max-w-screen-xl mx-auto px-4 2xl:px-0 pb-10 md:pb-15 border-b-2 border-gray-dark/80">
+      <div className="max-w-screen-xl mx-auto px-4 md:px-8 pb-12 md:pb-15 lg:pb-20 xl:px-0 border-b-2 border-gray-dark/80">
+        {/* Navigation */}
         <div className="flex justify-between items-center relative mt-6">
           {prevInstrument && (
             <Link
@@ -59,16 +60,17 @@ export default function Instrument() {
           )}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-4 mt-4 mb-12 md:mt-8 md:mb-15 bg-dark-rich md:bg-transparent rounded-b-xl md:rounded-xl overflow-hidden">
+        {/* Image & Description */}
+        <div className="grid md:grid-cols-2 gap-8 md:gap-4 mt-4 mb-14 md:mt-8 md:mb-18 border border-gray-800 bg-gray-dark rounded-b-xl md:rounded-xl overflow-hidden">
           <div className="relative rounded-t-xl overflow-hidden md:rounded-none">
             <img
-              className="w-full md:h-80 xl:h-full object-cover md:rounded-xl pointer-events-none"
+              className="w-full md:h-110 xl:h-full object-cover md:rounded-xl pointer-events-none"
               src={`/images/${instrument.id}.jpg`}
               alt={`${instrument.name} imagen`}
               loading="lazy"
             />
           </div>
-          <div className="space-y-6 pb-6 px-6 md:px-4 md:self-center">
+          <div className="space-y-6 pb-6 px-6 md:px-4 md:py-0 md:self-center">
             <div>
               <h2 className="mb-3 text-2xl text-gray-200 font-bold">
                 Descripción de la clase
@@ -88,13 +90,14 @@ export default function Instrument() {
           </div>
         </div>
 
-        <div className="mb-12 md:mb-15">
+        {/* Levels */}
+        <div className="mb-14 md:mb-18">
           <h3 className="text-2xl heading-amp mb-8">Niveles</h3>
-          <div className="grid lg:grid-cols-3 place-content-center gap-6 px-2 md:px-3">
+          <div className="grid lg:grid-cols-3 place-content-center gap-6">
             {instrument.levels.map((level) => (
               <div
                 key={level.level}
-                className="p-6 outline-1 outline-primary-400 bg-dark-rich rounded-xl space-y-3"
+                className="p-6 border border-gray-800 bg-gray-dark rounded-xl space-y-3"
               >
                 <h4 className="text-primary-100 font-semibold text-xl">
                   {level.level}
@@ -114,9 +117,10 @@ export default function Instrument() {
           </div>
         </div>
 
+        {/* Ages */}
         <div>
           <h3 className="text-2xl heading-amp mb-8">Edades</h3>
-          <div className="px-2 md:px-3">
+          <div className="">
             <TabAges />
           </div>
         </div>

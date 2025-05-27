@@ -29,7 +29,7 @@ export default function Advantages() {
     <>
       <AdvantagesHero />
 
-      <section className="max-w-screen-xl mx-auto section-spacing">
+      <section className="max-w-screen-xl mx-auto px-4 md:px-8 py-12 md:py-15 lg:py-22 border-b-2 border-gray-dark">
         <h3 className="text-center text-xl text-white font-bold mb-0">
           Ventajas
         </h3>
@@ -39,16 +39,15 @@ export default function Advantages() {
         <AdvantagesGrid />
       </section>
 
-      <section className="bg-dark-rich section-spacing">
-        <div className="max-w-screen-xl mx-auto grid md:grid-cols-2">
-          <div className="self-center">
-            <h2 className="text-2xl heading-amp mb-4">Nuestra Metodología</h2>
-            <p className="text-gray-300 px-2 md:px-3">
-              Nuestra metodología de enseñanza se basa en un enfoque integral
-              que combina la técnica instrumental, la teoría musical y la
-              expresión artística. Creemos que cada estudiante es único, por lo
-              que personalizamos nuestro método según sus necesidades, objetivos
-              y ritmo de aprendizaje.
+      <section className="bg-dark-rich-100">
+        <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 px-4 md:px-8 py-12 md:py-15 lg:py-22 border-b-2 border-gray-dark ">
+          <div className="self-center p-8 z-10 bg-gray-dark border border-gray-800 rounded-xl md:rounded-ss-xl md:rounded-es-xl md:rounded-se-none md:rounded-ee-none xl:rounded-xl xl:px-15 xl:py-10">
+            <h2 className="text-2xl font-bold text-white mb-4">
+              Nuestra Metodología
+            </h2>
+            <p className="text-gray-300">
+              Nuestra enseñanza combina técnica, teoría y expresión artística.
+              Adaptamos el método a las necesidades y ritmo de cada estudiante.
             </p>
             <ul className="space-y-4 mt-4 px-2 md:px-3">
               {methodologyFeatures.map(({ feature }, index) => (
@@ -64,10 +63,10 @@ export default function Advantages() {
               ))}
             </ul>
           </div>
-          <div className="hidden md:block px-2 md:px-3">
+          <div className="hidden md:block xl:-ms-10 z-0">
             <img
               src={'/images/header.jpg'}
-              className="rounded-xl overflow-hidden object-cover w-full"
+              className="overflow-hidden object-cover md:rounded-se-xl md:rounded-ee-xl xl:rounded-xl w-full md:h-full"
               alt="metodologia imagen"
               loading="lazy"
             />
@@ -75,16 +74,16 @@ export default function Advantages() {
         </div>
       </section>
 
-      <section className="max-w-screen-xl mx-auto section-spacing border-b-2 border-gray-dark/80">
+      <section className="max-w-screen-xl mx-auto px-4 md:px-8 py-12 md:py-15 lg:py-22 border-b-2 border-gray-dark">
         <h3 className="text-2xl heading-amp mb-6">Enfoque por Edades</h3>
-        <div className="px-2 md:px-3 ">
-          <TabAges />
-        </div>
+        <TabAges />
       </section>
 
-      <section className="section-spacing bg-dark-rich border-b-2 border-gray-dark/80">
-        <TestimonialsHeader />
-        <TestimonialsGrid />
+      <section className="bg-dark-rich-100">
+        <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-12 md:py-15 lg:py-22 border-b-2 border-gray-dark/80">
+          <TestimonialsHeader />
+          <TestimonialsGrid />
+        </div>
       </section>
     </>
   );

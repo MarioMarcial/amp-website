@@ -1,4 +1,4 @@
-export type AppSection = {
+export type AppMenuItem = {
   name: string;
   path: string;
 };

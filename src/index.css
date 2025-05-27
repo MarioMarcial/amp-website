@@ -19,6 +19,7 @@
   --color-primary-300: oklch(0.4 0.148144 202.8754);
   --color-primary-400: oklch(0.15 0.148144 202.8754);
   --color-primary-500: oklch(0.12 0.148144 202.8754);
+  --color-primary-600: oklch(0.06 0.148144 202.8754);
 
   /* Secondary */
   --color-secondary: oklch(0.6 0.2998 337.08);
@@ -52,16 +53,20 @@
 }
 
 @layer utilities {
-  .section-spacing {
+  .container-spacing {
+    margin-inline: auto;
     padding-inline: calc(var(--spacing) * 4);
     padding-block: calc(var(--spacing) * 12);
 
+    /* MD */
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 15) /* 3.75rem = 60px */;
+      padding-inline: calc(var(--spacing) * 8) /* 1rem = 16px */;
     }
 
-    @media (width >= 96rem) {
-      padding-inline: calc(var(--spacing) * 0) /* 0rem = 0px */;
+    /* LG */
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 24);
     }
   }
 
@@ -71,6 +76,7 @@
     font-weight: var(--font-weight-bold);
     color: var(--color-gray-100);
   }
+
   .heading-amp::before {
     content: '';
     position: absolute;

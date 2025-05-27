@@ -3,11 +3,11 @@ import { testimonialsData } from '../../data';
 export const TestimonialsGrid = () => {
   return (
     <>
-      <div className="max-w-screen-xl mx-auto bg-transparent grid md:grid-cols-2 space-y-5 md:space-y-0 md:space-x-4">
+      <div className="space-y-5 grid md:grid-cols-3 md:justify-center md:space-y-0 md:gap-x-4 xl:gap-x-6">
         {testimonialsData.map((testimonial) => (
           <div
             key={testimonial.id}
-            className="bg-dark-rich-100 p-8 border border-primary-400 space-y-5 rounded-xl w-full"
+            className="bg-gray-dark p-8 border border-gray-800 space-y-5 rounded-xl w-full"
           >
             <div className="w-30 mx-auto">
               <img
