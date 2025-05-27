@@ -11,7 +11,7 @@ export const Footer = () => {
       <footer className="px-4 md:px-8">
         <section className="bg-dark-rich-100 py-8 md:py-10">
           <div className="md:flex md:justify-evenly max-w-screen-xl mx-auto">
-            <div className="mb-6 md:mb-0">
+            <div className="mb-10 md:mb-0">
               <Link to={'/'} className="flex flex-col items-center">
                 <img
                   src={`${import.meta.env.BASE_URL}images/amp-logo.png`}
@@ -24,8 +24,8 @@ export const Footer = () => {
                 </span>
               </Link>
             </div>
-            <div className="grid grid-cols-1 justify-items-center text-center gap-8 md:grid-cols-2 md:text-start md:gap-0 xl:gap-6">
-              <div className="">
+            <div className="grid grid-cols-1 justify-items-center text-center gap-10 md:grid-cols-2 md:text-start md:gap-0 xl:gap-6">
+              <div>
                 <h4 className="mb-3 md:mb-6 text-sm font-semibold uppercase text-white">
                   Menú
                 </h4>
@@ -44,7 +44,7 @@ export const Footer = () => {
                   ))}
                 </ul>
               </div>
-              <div className="">
+              <div>
                 <h4 className="mb-3 md:mb-6 text-sm font-semibold uppercase text-white">
                   Contacto
                 </h4>
@@ -53,11 +53,11 @@ export const Footer = () => {
                     <li key={contact.type}>
                       <Link
                         to={contact.href}
-                        className={`hover:underline flex justify-center ${
+                        className={`hover:underline group flex justify-center ${
                           contact.type === 'location' ? '' : 'items-center'
                         } gap-2 md:justify-start`}
                       >
-                        <contact.icon className="text-white w-5 h-5" />
+                        <contact.icon className="text-gray-400 w-5 h-5 ease-in-out" />
                         {contact.label}
                       </Link>
                     </li>

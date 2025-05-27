@@ -3,7 +3,6 @@ import { Link, NavLink, useLocation } from 'react-router';
 import { appMenuData } from './../../data';
 import { IoMdMenu } from 'react-icons/io';
 import { IoClose } from 'react-icons/io5';
-import { Transition } from '@headlessui/react';
 
 export const Nav = () => {
   const { pathname } = useLocation();
@@ -15,7 +14,7 @@ export const Nav = () => {
 
   return (
     <nav className="bg-dark-rich-100 outline-primary/10 outline-1 md:outline-0 px-4 md:px-8">
-      <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between py-4 md:py-6">
+      <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between py-4 md:py-6 xl:py-7">
         <Link
           to="/"
           className="flex items-center space-x-2 rtl:space-x-reverse"
@@ -54,7 +53,7 @@ export const Nav = () => {
                   to={navItem.path}
                   className={({
                     isActive,
-                  }) => ` block p-0 rounded-sm border-0 transition-colors duration-150
+                  }) => ` block p-0 rounded-sm border-0 transition-colors duration-300
                     ${
                       isActive
                         ? 'text-primary p-0 m-0'
@@ -70,36 +69,34 @@ export const Nav = () => {
         </div>
 
         {/* Mobile */}
-        <Transition
-          show={isOpen}
-          enter="transition-opacity duration-300"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity duration-150 ease-out"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
+        <div
+          className={`md:hidden w-full transition-all duration-300 ease-in-out overflow-hidden
+            ${
+              isOpen
+                ? 'h-55 opacity-100 pointer-events-auto'
+                : 'h-0 opacity-0 pointer-events-none'
+            }
+          `}
         >
-          <div className="md:hidden md:opacity-0 w-full" id="navbar-solid-bg">
-            <ul className="flex flex-col font-medium mt-4 rounded-xl rtl:space-x-reverse">
-              {appMenuData.map((navItem) => (
-                <li key={navItem.name}>
-                  <NavLink
-                    to={navItem.path}
-                    className={({ isActive }) =>
-                      `block py-2 px-3 ${
-                        isActive
-                          ? 'rounded-sm bg-linear-to-l from-dark-rich from-15%   to-primary-500 to-40%  text-primary'
-                          : 'rounded-sm bg-dark-rich text-gray-300 hover:text-primary'
-                      }`
-                    }
-                  >
-                    {navItem.name}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Transition>
+          <ul className="flex flex-col font-medium mt-4 rounded-xl bg-dark-rich-100">
+            {appMenuData.map((navItem) => (
+              <li key={navItem.name}>
+                <NavLink
+                  to={navItem.path}
+                  className={({ isActive }) =>
+                    `block p-3 transition-colors duration-300 focus:border-none ${
+                      isActive
+                        ? 'text-primary rounded-xl bg-gray-dark'
+                        : 'text-gray-300 hover:text-primary-100'
+                    }`
+                  }
+                >
+                  {navItem.name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </nav>
   );
