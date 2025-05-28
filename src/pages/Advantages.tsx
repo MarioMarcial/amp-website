@@ -5,6 +5,7 @@ import {
   TestimonialsHeader,
 } from '../components/testimonials';
 import { FaRegCheckCircle } from 'react-icons/fa';
+import { Helmet } from '@dr.pogodin/react-helmet';
 
 const methodologyFeatures: { feature: string }[] = [
   {
@@ -27,6 +28,14 @@ const methodologyFeatures: { feature: string }[] = [
 export default function Advantages() {
   return (
     <>
+      <Helmet>
+        <title>¿Por qué elegir AMP? | Academia AMP</title>
+        <meta
+          name="description"
+          content="Conoce los beneficios únicos de aprender música en nuestra academia."
+        />
+      </Helmet>
+
       <AdvantagesHero />
 
       <section className="max-w-screen-xl mx-auto px-4 md:px-8 py-12 md:py-15 lg:py-22 border-b-2 border-gray-dark">

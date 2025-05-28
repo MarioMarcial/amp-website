@@ -3,10 +3,19 @@ import { ContactFAQ, ContactLeafletMap } from '../components/contact';
 import { FiMessageCircle } from 'react-icons/fi';
 import { RiExternalLinkLine } from 'react-icons/ri';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
+import { Helmet } from '@dr.pogodin/react-helmet';
 
 export default function Contact() {
   return (
     <>
+      <Helmet>
+        <title>Contacto | Academia AMP</title>
+        <meta
+          name="description"
+          content="Ponte en contacto con nosotros para resolver tus dudas o para agendar tu clase muestra sin costo."
+        />
+      </Helmet>
+
       <div className="max-w-screen-xl mx-auto px-4 py-6 md:px-8 grid space-y-10 md:grid-cols-2 md:gap-x-10">
         {/* 1st Column */}
         <section>

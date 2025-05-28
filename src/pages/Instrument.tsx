@@ -3,11 +3,9 @@ import { Link, Navigate, useParams } from 'react-router';
 import { TabAges } from '../components/ui/tabs/TabAgesGrid';
 import { Button } from '../components/ui/buttons';
 import { instrumentsData } from '../data';
-
 import type { Instrument } from '../types';
-
-// Functions
 import { getAdjacentInstruments } from '../helpers/getAdjacentInstruments';
+import { Helmet } from '@dr.pogodin/react-helmet';
 
 // Icons
 import {
@@ -34,6 +32,11 @@ export default function Instrument() {
 
   return (
     <>
+      <Helmet>
+        <title>Clases de {instrument.name} | Academia AMP</title>
+        <meta name="description" content={instrument.description} />
+      </Helmet>
+
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 pb-12 md:pb-15 lg:pb-20 xl:px-0 border-b-2 border-gray-dark/80">
         {/* Navigation */}
         <div className="flex justify-between items-center relative mt-6">

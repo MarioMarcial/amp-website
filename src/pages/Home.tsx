@@ -1,3 +1,4 @@
+import { Helmet } from '@dr.pogodin/react-helmet';
 import { HomeHero, HomeSiteSections } from '../components/home';
 import { InstrumentsGrid, InstrumentsHeader } from '../components/instruments';
 import {
@@ -8,6 +9,14 @@ import {
 export default function Home() {
   return (
     <>
+      <Helmet>
+        <title>Inicio | Academia AMP</title>
+        <meta
+          name="description"
+          content="Clases de música para todas las edades y niveles en Arte Musical Puebla. ¡Descubre tu talento en AMP! "
+        />
+      </Helmet>
+
       <HomeHero />
 
       {/* Instruments */}
