@@ -1,5 +1,9 @@
 import { contactMethodsData, socialMediaData } from '../data';
-import { ContactFAQ, ContactLeafletMap } from '../components/contact';
+import {
+  ContactFAQ,
+  ContactLeafletMap,
+  ContactHero,
+} from '../components/contact';
 import { FiMessageCircle } from 'react-icons/fi';
 import { RiExternalLinkLine } from 'react-icons/ri';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
@@ -15,6 +19,8 @@ export default function Contact() {
           content="Ponte en contacto con nosotros para resolver tus dudas o para agendar tu clase muestra sin costo."
         />
       </Helmet>
+
+      <ContactHero />
 
       <div className="max-w-screen-xl mx-auto px-4 py-6 md:px-8 grid space-y-10 md:grid-cols-2 md:gap-x-10">
         {/* 1st Column */}
@@ -180,7 +186,6 @@ export default function Contact() {
           </div>
         </section>
       </div>
-
       {/* FAQS */}
       <div className="max-w-screen-xl mx-auto px-4 pt-2 pb-6 md:px-8 xl:pt-8 md:pb-15 border-b-2 border-gray-dark/80">
         <ContactFAQ />
