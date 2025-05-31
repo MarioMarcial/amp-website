@@ -1,50 +1,61 @@
 import { useState } from 'react';
-import { agesData } from '../../../data';
-import type { AgeCategory } from '../../../types/ageTab';
+import { ageCategoriesData } from '../../../data';
+import type { AgeCategory } from '../../../types/ageCategory.types';
 import { Button } from '../buttons';
 import { MdDateRange } from 'react-icons/md';
 
-export const TabAges = () => {
-  const [currentTab, setCurrentTab] = useState<AgeCategory>(agesData[1]);
+export const TabAgesGrid = () => {
+  const [currentTab, setCurrentTab] = useState<AgeCategory>(
+    ageCategoriesData[1]
+  );
 
   return (
     <>
-      <div className="text-sm font-medium text-center rounded-lg shadow-sm flex bg-gray-dark">
-        {agesData.map((ageItem) => (
+      <div className="flex rounded-lg text-center text-sm font-medium shadow-sm bg-gray-dark">
+        {ageCategoriesData.map((category) => (
           <button
-            key={ageItem.id}
+            key={category.id}
             className={`inline-block w-full p-4 border-y-2 border-s-2 border-gray-900 focus:outline-none transition-colors duration-200 cursor-pointer ${
-              currentTab.id === ageItem.id
-                ? `bg-primary-100 text-dark-rich rounded-sm`
+              currentTab.id === category.id
+                ? `rounded-sm bg-primary-100 text-dark-rich`
                 : `bg-transparent text-gray-400`
             }`}
-            onClick={() => setCurrentTab({ ...ageItem })}
+            onClick={() => setCurrentTab({ ...category })}
           >
-            {ageItem.category}
+            {category.category}
           </button>
         ))}
       </div>
 
-      <div className="mt-5 p-6 bg-gray-dark space-y-4 rounded-xl border border-gray-800  md:p-9">
-        <h4 className="text-primary-100 font-semibold text-xl">
-          {currentTab.title}
-        </h4>
-        <p className="text-gray-300">{currentTab.description}</p>
-        <ul className="space-y-2">
-          {currentTab.details.map((detail, i) => (
-            <li key={i} className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
-              <span className="text-gray-300 font-semibold">{detail}</span>
-            </li>
-          ))}
-        </ul>
+      <div className="grid mt-5 md:grid-cols-2">
+        <div className="rounded-xl overflow-hidden">
+          <img
+            className="w-full h-full object-cover object-center pointer-events-none"
+            src={`${import.meta.env.BASE_URL}images/${currentTab.image}`}
+            alt={currentTab.image}
+            loading="lazy"
+          />
+        </div>
+        <div className="p-6 space-y-4">
+          <h3 className="text-gray-200 font-semibold text-xl">
+            {currentTab.title}
+          </h3>
+          <p className="text-gray-300">{currentTab.description}</p>
+          <ul className="space-y-2">
+            {currentTab.features.map((feature, i) => (
+              <li key={i} className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+                <span className="text-gray-300 font-semibold">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
-      <div className="text-center mt-8">
+      <div className="mt-8 text-center">
         <Button
           label="Agendar Clase"
-          bgColor={'secondary'}
-          textColor={'dark-rich'}
+          variant="secondary"
           url="/contacto"
           icon={MdDateRange}
         />

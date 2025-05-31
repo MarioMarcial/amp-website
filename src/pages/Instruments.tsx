@@ -1,6 +1,8 @@
 import { Helmet } from '@dr.pogodin/react-helmet';
+import { Container } from '../components/ui/containers/Container';
 import { InstrumentsGrid } from '../components/instruments/InstrumentsGrid';
 import { InstrumentsHeader } from '../components/instruments/InstrumentsHeader';
+import { HeroPage } from '../components/ui/heros/HeroPage';
 
 export default function Instruments() {
   return (
@@ -13,10 +15,20 @@ export default function Instruments() {
         />
       </Helmet>
 
-      <div className="max-w-screen-xl mx-auto px-4 py-6 md:px-8 md:pb-15 border-b-2 border-gray-dark/80">
+      <HeroPage
+        title={
+          <>
+            Encuentra tu <span className="text-primary">instrumento</span>
+          </>
+        }
+        description="Elige un instrumento y comienza a desarrollar tu talento"
+        image="hero-instrumentos.jpg"
+      />
+
+      <Container>
         <InstrumentsHeader />
         <InstrumentsGrid />
-      </div>
+      </Container>
     </>
   );
 }

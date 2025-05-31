@@ -1,38 +1,31 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate, BrowserRouter } from 'react-router';
-import {
-  Home,
-  Instruments,
-  Instrument,
-  Advantages,
-  Contact,
-  About,
-} from './pages';
-const HomeLayout = lazy(() => import('./layouts/HomeLayout'));
+import HomeLayout from './layouts/HomeLayout';
+import { Spinner } from './components/ui/spinners/Spinner';
+
+const Home = lazy(() => import('./pages/Home'));
+const Instruments = lazy(() => import('./pages/Instruments'));
+const Instrument = lazy(() => import('./pages/Instrument'));
+const Advantages = lazy(() => import('./pages/Advantages'));
+const Contact = lazy(() => import('./pages/Contact'));
 
 export const AppRouter = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Suspense fallback={<div>Cargando...</div>}>
-              <HomeLayout />
-            </Suspense>
-          }
-        >
-          <Route index element={<Home />} />
-          <Route path="/instrumentos" element={<Instruments />} />
-          <Route path="/instrumentos/:id" element={<Instrument />} />
-          <Route path="/ventajas" element={<Advantages />} />
-          <Route path="/nosotros" element={<About />} />
-          <Route path="/contacto" element={<Contact />} />
-        </Route>
+      <Suspense fallback={<Spinner />}>
+        <Routes>
+          <Route path="/" element={<HomeLayout />}>
+            <Route index element={<Home />} />
+            <Route path="instrumentos" element={<Instruments />} />
+            <Route path="instrumentos/:id" element={<Instrument />} />
+            <Route path="ventajas" element={<Advantages />} />
+            <Route path="contacto" element={<Contact />} />
+          </Route>
 
-        <Route path="/" element={<Navigate to={'/'} />} />
-        <Route path="*" element={<Navigate to={'/'} />} />
-      </Routes>
+          <Route path="/" element={<Navigate to="/" />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 };

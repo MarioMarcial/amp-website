@@ -1,5 +1,5 @@
 export type { Advantage } from './advantage.types';
-export type { AppMenuItem } from './appMenuItem.types';
+export type { AppNavItem } from './appNavItem.types';
 export type { ContactMethod } from './contactMethod.types';
 export type { Instrument } from './instrument.types';
 export type { SocialLink } from './socialLink.types';

@@ -1,20 +1,22 @@
 import { Link, NavLink } from 'react-router';
 
-import { appMenuData, contactMethodsData, socialMediaData } from '../../data';
+import { appNavData, contactMethodsData, socialMediaData } from '../../data';
+import { useMemo } from 'react';
 
 export const Footer = () => {
-  const contactMethods = contactMethodsData.filter(
-    (contact) => contact.type !== 'schedule'
+  const contactMethods = useMemo(
+    () => contactMethodsData.filter((contact) => contact.type !== 'schedule'),
+    []
   );
   return (
     <>
-      <footer className="px-4 md:px-8">
-        <section className="bg-dark-rich-100 py-8 md:py-10">
-          <div className="md:flex md:justify-evenly max-w-screen-xl mx-auto">
+      <footer className="">
+        <section className="bg-dark-rich-200 px-4 md:px-8 xl:px-0 py-8 md:py-10">
+          <div className="md:flex md:justify-evenly max-w-screen-lg mx-auto">
             <div className="mb-10 md:mb-0">
               <Link to={'/'} className="flex flex-col items-center">
                 <img
-                  src={`${import.meta.env.BASE_URL}images/amp-logo.png`}
+                  src={`${import.meta.env.BASE_URL}images/logo.png`}
                   className="h-20 object-contain md:h-30 pointer-events-none md:self-center"
                   alt="FlowBite Logo"
                   loading="lazy"
@@ -30,7 +32,7 @@ export const Footer = () => {
                   Menú
                 </h4>
                 <ul className="font-medium space-y-3 md:space-y-4">
-                  {appMenuData.map((item) => (
+                  {appNavData.map((item) => (
                     <li key={item.path}>
                       <NavLink
                         to={item.path}
@@ -68,10 +70,10 @@ export const Footer = () => {
           </div>
         </section>
 
-        <hr className="border-gray-900" />
+        <hr className="border-gray-dark/80" />
 
-        <section className="bg-dark-rich-200">
-          <div className="max-w-screen-xl mx-auto py-6 text-center sm:flex sm:items-center sm:justify-between">
+        <section className="bg-dark-rich-300">
+          <div className="max-w-screen-lg mx-auto py-6 text-center sm:flex sm:items-center sm:justify-between">
             <span className="text-sm sm:text-center text-gray-400">
               © 2025&nbsp;
               <Link to={'/'} className="hover:underline">

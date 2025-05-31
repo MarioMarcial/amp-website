@@ -1,2 +1,2 @@
 export { TestimonialsGrid } from './TestimonialsGrid';
-export { TestimonialsHeader } from './TestimonialsHeader';
+export { TestimonialsLayout } from './TestimonialsLayout';

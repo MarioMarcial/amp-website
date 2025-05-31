@@ -32,7 +32,7 @@ export const advantagesData: Advantage[] = [
     id: 4,
     title: 'Planes de estudio claros y efectivos',
     description:
-      'Cada clase sigue una ruta bien pensada. Avanzas paso a paso con ejercicios que te ayudan a crecer de forma constante y sin frustración.',
+      'Cada clase sigue una ruta bien pensada. Avanzas paso a paso con ejercicios que te ayudan a crecer de forma constante.',
     icon: FaRegFlag,
   },
   {

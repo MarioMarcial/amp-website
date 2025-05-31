@@ -1,6 +1,6 @@
 export { advantagesData } from './advantagesData';
-export { agesData } from './agesData';
-export { appMenuData } from './appMenuData';
+export { ageCategoriesData } from './agesCategoriesData';
+export { appNavData } from './appNavData';
 export { contactMethodsData } from './contactMethodsData';
 export { instrumentsData } from './instrumentsData';
 export { socialMediaData } from './socialMediaData';

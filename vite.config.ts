@@ -5,5 +5,9 @@ import tailwindcss from '@tailwindcss/vite';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/amp-website/',
+  /* server: {
+    host: true, // ¡Este es el setting clave!
+    port: 5173, // Confirma el puerto que usas
+  }, */
+  // base: '/amp-website/',
 });
