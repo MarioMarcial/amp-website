@@ -27,8 +27,6 @@ export const PromoBanner = () => {
             label={'Explorar Instrumentos'}
             url={'/instrumentos'}
             icon={FaArrowRightLong}
-            bgColor={'secondary'}
-            textColor="dark-rich"
             iconStart={false}
           />
 
