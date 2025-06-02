@@ -33,9 +33,9 @@ export const Footer = () => {
                 </h4>
                 <ul className="font-medium space-y-3 md:space-y-4">
                   {appNavData.map((item) => (
-                    <li key={item.path}>
+                    <li key={item.url}>
                       <NavLink
-                        to={item.path}
+                        to={item.url}
                         className={({ isActive }) => `hover:underline
                     ${isActive ? 'text-primary p-0 m-0' : ' text-gray-400'}
                   `}

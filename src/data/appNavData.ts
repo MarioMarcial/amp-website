@@ -1,9 +1,9 @@
 import type { AppNavItem } from '../types';
 
 export const appNavData: AppNavItem[] = [
-  { name: 'Inicio', path: '/' },
-  { name: 'Instrumentos', path: '/instrumentos' },
-  { name: 'Ventajas', path: '/ventajas' },
-  // { name: 'Nosotros', path: '/nosotros' },
-  { name: 'Contacto', path: '/contacto' },
+  { name: 'Inicio', url: '/' },
+  { name: 'Instrumentos', url: '/instrumentos' },
+  { name: 'Ventajas', url: '/ventajas' },
+  // { name: 'Nosotros', url: '/nosotros' },
+  { name: 'Contacto', url: '/contacto' },
 ];

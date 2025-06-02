@@ -1,8 +1,8 @@
 import type { IconType } from 'react-icons';
 
-export type HomeExploreItem = {
+export interface HomeExploreItem {
   title: string;
   description: string;
   url: string;
   icon: IconType;
-};
+}

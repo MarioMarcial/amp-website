@@ -49,7 +49,7 @@ export const Nav = () => {
             {appNavData.map((navItem) => (
               <li key={navItem.name}>
                 <NavLink
-                  to={navItem.path}
+                  to={navItem.url}
                   className={({
                     isActive,
                   }) => `block p-0 rounded-sm border-0 transition-colors duration-300
@@ -81,7 +81,7 @@ export const Nav = () => {
             {appNavData.map((navItem) => (
               <li key={navItem.name}>
                 <NavLink
-                  to={navItem.path}
+                  to={navItem.url}
                   className={({ isActive }) =>
                     `block p-3 transition-colors duration-300 focus:border-none ${
                       isActive

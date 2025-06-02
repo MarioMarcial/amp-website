@@ -1,14 +1,16 @@
-export type Testimonial = {
+type Instrument =
+  | 'Canto'
+  | 'Violin'
+  | 'Batería'
+  | 'Bajo'
+  | 'Saxofón'
+  | 'Piano'
+  | 'Guitarra';
+
+export interface Testimonial {
   id: number;
   name: string;
   img: string;
   review: string;
-  instrument:
-    | 'Canto'
-    | 'Violin'
-    | 'Batería'
-    | 'Bajo'
-    | 'Saxofón'
-    | 'Piano'
-    | 'Guitarra';
-};
+  intrument: Instrument;
+}

@@ -1,17 +1,17 @@
-export type LevelBase = 'Principiante' | 'Intermedio' | 'Avanzado';
-
-export type LevelBaseData = {
-  level: LevelBase;
-  description: string;
-};
-
-export type Level = LevelBaseData & {
-  topics: string[];
-};
-
-export type Instrument = {
+export interface Instrument {
   id: string;
   name: string;
   description: string;
   levels: Level[];
-};
+}
+
+export interface Level extends LevelBaseData {
+  topics: string[];
+}
+
+export interface LevelBaseData {
+  level: LevelBase;
+  description: string;
+}
+
+export type LevelBase = 'Principiante' | 'Intermedio' | 'Avanzado';

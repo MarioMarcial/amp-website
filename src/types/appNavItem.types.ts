@@ -1,4 +1,4 @@
-export type AppNavItem = {
+export interface AppNavItem {
   name: string;
-  path: string;
-};
+  url: string;
+}

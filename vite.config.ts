@@ -9,5 +9,5 @@ export default defineConfig({
     host: true, // ¡Este es el setting clave!
     port: 5173, // Confirma el puerto que usas
   }, */
-  // base: '/amp-website/',
+  base: '/amp-website/',
 });
