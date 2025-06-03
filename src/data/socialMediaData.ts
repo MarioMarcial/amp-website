@@ -18,7 +18,7 @@ export const socialMediaData: SocialLink[] = [
   },
   {
     name: 'Tiktok',
-    url: '#',
+    url: 'https://www.tiktok.com/@artemrhfw71',
     icon: PiTiktokLogo,
     color: '#fff',
   },

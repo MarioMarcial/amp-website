@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Inicio | Academia AMP</title>
+        <title>Inicio | Academia de Música AMP</title>
         <meta
           name="description"
           content="Clases de música para todas las edades y niveles en Arte Musical Puebla. ¡Descubre tu talento en AMP! "
@@ -32,7 +32,7 @@ export default function Home() {
       />
 
       {/* Instruments */}
-      <Container as="section" hasBorderBottom={false}>
+      <Container as="section" hasBorderBottom={false} size="max-w-screen-md">
         <InstrumentsHeader />
         <InstrumentsGrid />
       </Container>

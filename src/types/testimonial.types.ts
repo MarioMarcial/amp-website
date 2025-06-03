@@ -12,5 +12,5 @@ export interface Testimonial {
   name: string;
   img: string;
   review: string;
-  intrument: Instrument;
+  instrument: Instrument;
 }

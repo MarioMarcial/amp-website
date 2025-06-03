@@ -8,7 +8,7 @@ export default function Instruments() {
   return (
     <>
       <Helmet>
-        <title>Clases de Instrumentos Musicales | Academia AMP</title>
+        <title>Clases de Música | Academia de Música AMP</title>
         <meta
           name="description"
           content="Conoce nuestras opciones de clases y comienza a desarrollar tu potencial"
@@ -25,7 +25,7 @@ export default function Instruments() {
         image="hero-instrumentos.jpg"
       />
 
-      <Container>
+      <Container size="max-w-screen-md">
         <InstrumentsHeader />
         <InstrumentsGrid />
       </Container>

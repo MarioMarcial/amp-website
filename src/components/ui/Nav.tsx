@@ -23,6 +23,7 @@ export const Nav = () => {
             src={`${import.meta.env.BASE_URL}images/logo.png`}
             className="h-11 object-contain pointer-events-none"
             alt="Arte Musical Puebla Logo"
+            loading="lazy"
           />
           <span className="hidden text-[10px] text-gray-50 uppercase font-bold whitespace-nowrap md:block">
             Arte Musical Puebla

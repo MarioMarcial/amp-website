@@ -29,7 +29,7 @@ export default function Advantages() {
   return (
     <>
       <Helmet>
-        <title>¿Por qué elegir AMP? | Academia AMP</title>
+        <title>¿Por qué elegir AMP? | Academia de Música AMP</title>
         <meta
           name="description"
           content="Conoce los beneficios únicos de aprender música en nuestra academia."

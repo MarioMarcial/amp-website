@@ -38,7 +38,7 @@ export default function Instrument() {
   return (
     <>
       <Helmet>
-        <title>Clases de {instrument.name} | Academia AMP</title>
+        <title>Clases de {instrument.name} | Academia de Música AMP</title>
         <meta name="description" content={instrument.description} />
       </Helmet>
 
