@@ -49,16 +49,15 @@ export const TabAgesGrid = () => {
               </li>
             ))}
           </ul>
+          <div className="mt-8 flex flex-col md:flex-row justify-start">
+            <Button
+              label="Agendar Clase"
+              variant="secondary"
+              url="/contacto"
+              icon={MdDateRange}
+            />
+          </div>
         </div>
-      </div>
-
-      <div className="mt-8 text-center">
-        <Button
-          label="Agendar Clase"
-          variant="secondary"
-          url="/contacto"
-          icon={MdDateRange}
-        />
       </div>
     </>
   );
