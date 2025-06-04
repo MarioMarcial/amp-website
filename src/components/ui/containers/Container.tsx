@@ -1,11 +1,11 @@
 import type { ReactNode } from 'react';
 
-type ContainerProps = {
+interface ContainerProps {
   children: ReactNode;
   hasBorderBottom?: boolean;
   as?: 'div' | 'section' | 'main' | 'footer' | 'header';
   size?: 'max-w-screen-md' | 'max-w-screen-lg' | 'max-w-screen-xl';
-};
+}
 
 export const Container: React.FC<ContainerProps> = ({
   children,

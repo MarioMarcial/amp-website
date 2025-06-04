@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router';
-import { appNavData } from './../../data';
+import { appNavData } from './../../../data';
 import { IoMdMenu } from 'react-icons/io';
 import { IoClose } from 'react-icons/io5';
 

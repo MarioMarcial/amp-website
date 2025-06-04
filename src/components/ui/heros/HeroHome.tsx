@@ -1,14 +1,8 @@
-import type { ReactNode } from 'react';
+import type { Hero } from '../../../types/hero.types';
 import { Button } from '../buttons';
 import { FaArrowRightLong } from 'react-icons/fa6';
 
-type HeroHomeProps = {
-  title: ReactNode;
-  description: string;
-  image: string;
-};
-
-export const HeroHome = ({ title, description, image }: HeroHomeProps) => {
+export const HeroHome = ({ title, description, image }: Hero) => {
   return (
     <section
       className={`relative z-10 bg-linear-to-t from-dark-rich-100 to-primary-600 after:content-['']

@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router';
-import { HeadingSection } from '../ui/headings/HeadingSection';
+import { HeadingSection } from '../ui';
 
 export const InstrumentsHeader = () => {
   const { pathname } = useLocation();
@@ -9,17 +9,17 @@ export const InstrumentsHeader = () => {
         as="h3"
         title="Clases"
         spacing="mb-0"
-        textAlign="center"
-        fontSize="xl"
+        textAlign="text-center"
+        fontSize="text-xl"
       />
 
       <HeadingSection
         as="h2"
         title="Instrumentos"
-        color="primary"
-        textAlign="center"
+        color="text-primary"
+        textAlign="text-center"
         spacing="-mt-2"
-        fontBold="extrabold"
+        fontBold="font-extrabold"
         responsiveClasses="md:text-3xl"
       />
 

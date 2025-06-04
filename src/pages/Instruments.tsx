@@ -1,8 +1,6 @@
 import { Helmet } from '@dr.pogodin/react-helmet';
-import { Container } from '../components/ui/containers/Container';
-import { InstrumentsGrid } from '../components/instruments/InstrumentsGrid';
-import { InstrumentsHeader } from '../components/instruments/InstrumentsHeader';
-import { HeroPage } from '../components/ui/heros/HeroPage';
+import { Container, HeroPage } from '../components/ui';
+import { InstrumentsGrid, InstrumentsHeader } from '../components/instruments';
 
 export default function Instruments() {
   return (

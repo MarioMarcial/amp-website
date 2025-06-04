@@ -1,19 +1,10 @@
-import type { ReactNode } from 'react';
-import type { Instrument } from './../../../types';
 import { Link } from 'react-router';
 
+import type { HeroInstrument as HeroInstrumentProps } from '../../../types';
 import {
   MdOutlineArrowBackIosNew,
   MdOutlineArrowForwardIos,
 } from 'react-icons/md';
-
-type HeroProps = {
-  title: ReactNode;
-  description: string;
-  image: string;
-  prevInstrument: Instrument | undefined;
-  nextInstrument: Instrument | undefined;
-};
 
 export const HeroInstrument = ({
   title,
@@ -21,7 +12,7 @@ export const HeroInstrument = ({
   image,
   prevInstrument,
   nextInstrument,
-}: HeroProps) => {
+}: HeroInstrumentProps) => {
   const imageUrl = `${import.meta.env.BASE_URL}images/${image}`;
 
   return (

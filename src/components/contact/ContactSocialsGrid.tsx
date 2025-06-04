@@ -1,8 +1,8 @@
 import type { SocialLink } from '../../types';
 
-type ContactSocialsGridProps = {
+interface ContactSocialsGridProps {
   socialsData: SocialLink[];
-};
+}
 
 export const ContactSocialsGrid = ({
   socialsData,

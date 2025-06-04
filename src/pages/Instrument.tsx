@@ -6,11 +6,13 @@ import type { Instrument } from '../types';
 import { instrumentsData } from '../data';
 import { getAdjacentInstruments } from '../helpers/getAdjacentInstruments';
 
-import { Container } from '../components/ui/containers/Container';
-import { HeadingSection } from '../components/ui/headings/HeadingSection';
-import { Button } from '../components/ui/buttons';
-import { TabAgesGrid } from '../components/ui/tabs/TabAgesGrid';
-import { HeroInstrument } from '../components/ui/heros';
+import {
+  Container,
+  HeadingSection,
+  Button,
+  HeroInstrument,
+} from '../components/ui';
+import { AgesTabGrid } from '../components/ages';
 
 // Icons
 import { MdDateRange } from 'react-icons/md';
@@ -128,7 +130,7 @@ export default function Instrument() {
           responsiveClasses="md:text-center"
         />
 
-        <TabAgesGrid />
+        <AgesTabGrid />
       </Container>
     </>
   );

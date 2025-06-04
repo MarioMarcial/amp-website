@@ -1,15 +1,15 @@
 import { Link } from 'react-router';
-import type { ElementType } from 'react';
+import type { IconType } from 'react-icons';
 import clsx from 'clsx';
 
-type ButtonPrimaryProps = {
+interface ButtonProps {
   fontBold?: boolean;
-  icon?: ElementType;
+  icon?: IconType;
   iconStart?: boolean;
   label: string;
   url: string;
   variant?: 'primary' | 'secondary';
-};
+}
 
 export const Button = ({
   label,
@@ -18,7 +18,7 @@ export const Button = ({
   variant = 'primary',
   iconStart = true,
   fontBold = false,
-}: ButtonPrimaryProps) => {
+}: ButtonProps) => {
   const className = clsx(
     'inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-base text-center text-dark-rich transition-colors',
     `${iconStart ? 'flex-row' : 'flex-row-reverse'}`,

@@ -1,29 +1,10 @@
 import { Helmet } from '@dr.pogodin/react-helmet';
-import { Container } from '../components/ui/containers/Container';
-import { HeroPage } from '../components/ui/heros/HeroPage';
-import { HeadingSection } from '../components/ui/headings/HeadingSection';
-import { TabAgesGrid } from '../components/ui/tabs/TabAgesGrid';
-import { AdvantagesGrid } from '../components/advantages/AdvantagesGrid';
+import { AdvantagesGrid } from '../components/advantages';
+import { AgesTabGrid } from '../components/ages';
 import { TestimonialsLayout } from '../components/testimonials';
+import { HeroPage, HeadingSection, Container } from '../components/ui';
+import { methodologyFeatures } from '../data';
 import { FaRegCheckCircle } from 'react-icons/fa';
-
-const methodologyFeatures: { feature: string }[] = [
-  {
-    feature: 'Evaluación inicial para determinar el nivel y objetivos',
-  },
-  {
-    feature: 'Plan de estudio personalizado',
-  },
-  {
-    feature: 'Combinación de teoría y práctica',
-  },
-  {
-    feature: 'Seguimiento continuo del progreso',
-  },
-  {
-    feature: 'Preparación para presentaciones y recitales',
-  },
-];
 
 export default function Advantages() {
   return (
@@ -48,7 +29,7 @@ export default function Advantages() {
       />
 
       <Container as="section">
-        <HeadingSection as="h2" title="Te Ofrecemos" textAlign="center" />
+        <HeadingSection as="h2" title="Te Ofrecemos" textAlign="text-center" />
         <AdvantagesGrid />
       </Container>
 
@@ -90,8 +71,12 @@ export default function Advantages() {
       </Container>
 
       <Container as="section" hasBorderBottom={false}>
-        <HeadingSection as="h2" title="Enfoque Por Edad" textAlign="center" />
-        <TabAgesGrid />
+        <HeadingSection
+          as="h2"
+          title="Enfoque Por Edad"
+          textAlign="text-center"
+        />
+        <AgesTabGrid />
       </Container>
 
       <TestimonialsLayout />

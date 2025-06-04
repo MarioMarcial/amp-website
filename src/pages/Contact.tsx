@@ -1,5 +1,6 @@
 import { Helmet } from '@dr.pogodin/react-helmet';
 import { contactMethodsData, socialMediaData } from '../data';
+import { HeroPage, Container, HeadingSection } from '../components/ui';
 import {
   ContactFAQGrid,
   ContactLeafletMap,
@@ -8,9 +9,6 @@ import {
   ContactHowToArriveCard,
   ContactWhatsAppCard,
 } from '../components/contact';
-import { HeroPage } from '../components/ui/heros/HeroPage';
-import { Container } from '../components/ui/containers/Container';
-import { HeadingSection } from '../components/ui/headings/HeadingSection';
 
 export default function Contact() {
   return (

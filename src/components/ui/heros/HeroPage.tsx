@@ -1,12 +1,6 @@
-import type { ReactNode } from 'react';
+import type { Hero } from '../../../types/hero.types';
 
-type HeroProps = {
-  title: ReactNode;
-  description: string;
-  image: string;
-};
-
-export const HeroPage = ({ title, description, image }: HeroProps) => {
+export const HeroPage = ({ title, description, image }: Hero) => {
   const imageUrl = `${import.meta.env.BASE_URL}images/${image}`;
 
   return (

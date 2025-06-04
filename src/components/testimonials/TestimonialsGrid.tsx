@@ -1,5 +1,5 @@
-import { ImQuotesRight } from 'react-icons/im';
 import { testimonialsData } from '../../data';
+import { ImQuotesRight } from 'react-icons/im';
 
 export const TestimonialsGrid = () => {
   return (
@@ -10,7 +10,7 @@ export const TestimonialsGrid = () => {
             key={testimonial.id}
             className="w-full h-full p-8 space-y-6 rounded-xl bg-gray-dark border border-gray-800 lg:flex lg:flex-col lg:justify-between lg:space-y-3"
           >
-            {/* CardHeader */}
+            {/* Header */}
             <div className="flex justify-start items-center gap-4 lg:flex-col">
               <div className="lg:space-y-2">
                 <img
@@ -36,7 +36,7 @@ export const TestimonialsGrid = () => {
               </div>
             </div>
 
-            {/* Card Body */}
+            {/* Body */}
             <div className="relative space-y-2">
               <div className="w-25 grayscale-100 brightness-150 lg:mx-auto lg:hidden">
                 <img
@@ -52,7 +52,7 @@ export const TestimonialsGrid = () => {
               <ImQuotesRight className="w-10 h-10 ml-auto absolute -bottom-7 -right-3 fill-primary/8 lg:hidden" />
             </div>
 
-            {/* Card Footer */}
+            {/* Footer */}
             <div className="hidden lg:block lg:text-center">
               <p className="font-semibold text-primary/90">
                 {testimonial.name}

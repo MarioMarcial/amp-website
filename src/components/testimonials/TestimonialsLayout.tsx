@@ -1,5 +1,4 @@
-import { Container } from '../ui/containers/Container';
-import { HeadingSection } from '../ui/headings/HeadingSection';
+import { Container, HeadingSection } from '../ui';
 import { TestimonialsGrid } from './TestimonialsGrid';
 
 export const TestimonialsLayout = () => {

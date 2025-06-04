@@ -1,7 +1,6 @@
 import { Helmet } from '@dr.pogodin/react-helmet';
-import { HeroHome } from '../components/ui/heros';
-import { Container } from '../components/ui/containers/Container';
-import { HeadingSection } from '../components/ui/headings/HeadingSection';
+
+import { HeadingSection, Container, HeroHome } from '../components/ui';
 import { InstrumentsGrid, InstrumentsHeader } from '../components/instruments';
 import { TestimonialsLayout } from '../components/testimonials';
 import { HomeExploreGrid } from '../components/home/HomeExploreGrid';
@@ -45,7 +44,7 @@ export default function Home() {
           as="h2"
           title="Explora Nuestra Academia"
           spacing="mb-6"
-          textAlign="center"
+          textAlign="text-center"
         />
         <HomeExploreGrid />
       </Container>

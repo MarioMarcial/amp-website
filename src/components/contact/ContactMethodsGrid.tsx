@@ -1,8 +1,8 @@
 import type { ContactMethod } from '../../types';
 
-type ContactMethodsGridProps = {
+interface ContactMethodsGridProps {
   contactMethods: ContactMethod[];
-};
+}
 
 export const ContactMethodsGrid = ({
   contactMethods,

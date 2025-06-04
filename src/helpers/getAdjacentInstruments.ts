@@ -1,10 +1,10 @@
 import { instrumentsData } from '../data';
 import type { Instrument } from './../types';
 
-type InstrumentNav = {
+interface InstrumentNav {
   prevInstrument?: Instrument;
   nextInstrument?: Instrument;
-};
+}
 
 export const getAdjacentInstruments = (id: Instrument['id']): InstrumentNav => {
   const index = instrumentsData.findIndex((instrument) => instrument.id === id);

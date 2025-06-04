@@ -1,7 +1,11 @@
+import { useMemo } from 'react';
 import { Link, NavLink } from 'react-router';
 
-import { appNavData, contactMethodsData, socialMediaData } from '../../data';
-import { useMemo } from 'react';
+import {
+  appNavData,
+  contactMethodsData,
+  socialMediaData,
+} from './../../../data';
 
 export const Footer = () => {
   const contactMethods = useMemo(

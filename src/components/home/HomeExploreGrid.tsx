@@ -1,5 +1,5 @@
 import { homeExploreData } from '../../data/homeExploreData';
-import { Button } from '../ui/buttons/Button';
+import { Button } from '../ui';
 
 export const HomeExploreGrid = () => {
   return (

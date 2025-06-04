@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate, HashRouter } from 'react-router';
 import HomeLayout from './layouts/HomeLayout';
-import { Spinner } from './components/ui/spinners/Spinner';
+import { Spinner } from './components/ui';
 
 const Home = lazy(() => import('./pages/Home'));
 const Instruments = lazy(() => import('./pages/Instruments'));
