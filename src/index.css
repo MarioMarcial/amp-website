@@ -1,10 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: url('./assets/BebasNeue-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'Work Sans', sans-serif;
+  src: url('./assets/WorkSans-VariableFont.woff2');
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+}
+
 @theme {
-  --font-montserrat: 'Montserrat', sans-serif;
-  --font-inter: 'Inter', sans-serif;
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-work-sans: 'Work Sans', sans-serif;
 
   --color-dark-rich: oklch(0.16 0.0218 274.75);
   --color-dark-rich-100: oklch(0.14 0.0218 274.75);
@@ -63,7 +76,7 @@
 
 @layer base {
   body {
-    font-family: var(--font-inter);
+    font-family: var(--font-work-sans);
   }
 
   h1,
@@ -71,7 +84,7 @@
   h3,
   h4,
   h5 {
-    font-family: var(--font-montserrat);
+    font-family: var(--font-bebas);
   }
 }
 
