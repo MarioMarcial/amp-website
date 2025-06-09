@@ -1,23 +1,26 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-optical-sizing: auto;
   font-style: normal;
-  src: url('./assets/BebasNeue-Regular.woff2');
+  font-weight: 100 900;
+  src: url('./assets/Montserrat-VariableFont.woff2');
 }
 
 @font-face {
-  font-family: 'Work Sans', sans-serif;
-  src: url('./assets/WorkSans-VariableFont.woff2');
-  font-style: normal;
-  font-weight: 100 700;
   font-display: swap;
+  font-family: 'Inter';
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('./assets/Inter-VariableFont_opsz.woff2');
 }
 
 @theme {
-  --font-bebas: 'Bebas Neue', sans-serif;
-  --font-work-sans: 'Work Sans', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-inter: 'Inter', sans-serif;
 
   --color-dark-rich: oklch(0.16 0.0218 274.75);
   --color-dark-rich-100: oklch(0.14 0.0218 274.75);
@@ -76,7 +79,7 @@
 
 @layer base {
   body {
-    font-family: var(--font-work-sans);
+    font-family: var(--font-inter);
   }
 
   h1,
@@ -84,7 +87,7 @@
   h3,
   h4,
   h5 {
-    font-family: var(--font-bebas);
+    font-family: var(--font-montserrat);
   }
 }
 

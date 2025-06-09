@@ -30,7 +30,7 @@ export const Footer = () => {
                   alt="FlowBite Logo"
                   loading="lazy"
                 />
-                <span className="hidden self-center font-extrabold uppercase whitespace-nowrap text-white md:inline-block md:text-md lg:text-lg">
+                <span className="hidden self-start font-extrabold whitespace-nowrap text-white md:inline-block lg:self-center md:text-lg">
                   Arte Musical Puebla
                 </span>
               </Link>
@@ -86,7 +86,7 @@ export const Footer = () => {
         <hr className="border-gray-dark/80" />
 
         <section className="bg-dark-rich-300">
-          <div className="max-w-screen-lg mx-auto py-6 text-center sm:flex sm:items-center sm:justify-between">
+          <div className="max-w-screen-lg mx-auto px-4 md:px-8 xl:px-0 py-6 text-center sm:flex sm:items-center sm:justify-between">
             <span className="text-sm sm:text-center text-gray-400">
               © 2025&nbsp;
               <Link to={'/'} className="hover:underline">
@@ -94,7 +94,7 @@ export const Footer = () => {
               </Link>
               . All Rights Reserved.
             </span>
-            <div className="flex mt-4 justify-center sm:mt-0 gap-2">
+            <div className="flex mt-3 justify-center sm:mt-0 gap-2">
               {socialMediaData.map((social) => (
                 <a
                   key={social.name}

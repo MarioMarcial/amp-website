@@ -33,7 +33,7 @@ export default function Contact() {
       />
 
       <Container as="section">
-        <div className="grid space-y-10 md:grid-cols-2 md:gap-x-10">
+        <div className="grid space-y-10 md:space-y-0 md:grid-cols-2 md:gap-x-10">
           {/* 1st Column */}
           <div>
             <HeadingSection as="h2" title="Medios de Contacto" />

@@ -27,7 +27,7 @@ export const Nav = () => {
             alt="Arte Musical Puebla Logo"
             loading="lazy"
           />
-          <span className="hidden text-[10px] text-gray-50 uppercase font-bold whitespace-nowrap md:block">
+          <span className="hidden text-gray-50 font-bebas font-bold whitespace-nowrap md:block md:text-[14px]">
             Arte Musical Puebla
           </span>
         </Link>
