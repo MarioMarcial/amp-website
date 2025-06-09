@@ -17,8 +17,8 @@ export const ContactHowToArriveCard = () => {
                 En transporte público:
               </h4>
               <p className="text-gray-300">
-                Rutas de autobús: 10, 14, 25 y 32 con parada en Av. Juárez y
-                Calle Reforma.
+                Rutas de autobús: 10, Boulevard C.U., Nueva Visión, Loma Bella,
+                Ruta 11.
               </p>
             </div>
 
@@ -27,8 +27,8 @@ export const ContactHowToArriveCard = () => {
                 En automóvil:
               </h4>
               <p className="text-gray-300">
-                Estacionamiento disponible en el edificio. Entrada por Calle
-                Reforma.
+                Estacionamiento disponible en el edificio. Entrada por Calle 5
+                Sur o Avenida 33 Poniente.
               </p>
             </div>
 
@@ -37,8 +37,8 @@ export const ContactHowToArriveCard = () => {
                 Puntos de referencia:
               </h4>
               <p className="text-gray-300">
-                A dos cuadras del Parque Central y frente al Centro Comercial
-                Las Américas.
+                A 4 calles de la línea 2 del ruta. 2da planta del edificio al
+                lado del Oxxo. A 4 calles del Bodega Aurrera.
               </p>
             </div>
           </div>
