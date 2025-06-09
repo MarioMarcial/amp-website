@@ -48,6 +48,8 @@ export const ContactHowToArriveCard = () => {
             <a
               href="https://maps.app.goo.gl/ozyDkep4Q41435Dg6"
               target="_blank"
+              title="Abrir en Google Maps"
+              aria-label="Abrir en Google Maps"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary-100 text-dark-rich-100 py-2 px-4 rounded-lg transition-colors"
             >

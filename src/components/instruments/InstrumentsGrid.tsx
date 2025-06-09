@@ -9,6 +9,8 @@ export const InstrumentsGrid = () => {
           <Link
             key={instrument.id}
             to={`/instrumentos/${instrument.id}`}
+            title={`Ir a clases de ${instrument.name.toLowerCase()}`}
+            aria-label={`Ir a clases de ${instrument.name.toLowerCase()}`}
             className="group w-full py-5 rounded-lg overflow-hidden bg-transparent border-1 border-transparent transition-all duration-500 ease-in-out hover:shadow-xl hover:border-gray-900 hover:bg-gray-dark hover:shadow-black-200 xl:py-7"
           >
             <div className="flex flex-col items-center justify-center">

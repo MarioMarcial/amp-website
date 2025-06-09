@@ -18,7 +18,12 @@ export const Footer = () => {
         <section className="bg-dark-rich-200 px-4 md:px-8 xl:px-0 py-8 md:py-10">
           <div className="md:flex md:justify-evenly max-w-screen-lg mx-auto">
             <div className="mb-10 md:mb-0">
-              <Link to={'/'} className="flex flex-col items-center">
+              <Link
+                to={'/'}
+                title="Ir a página de inicio"
+                aria-label="Ir a página de inicio"
+                className="flex flex-col items-center"
+              >
                 <img
                   src={`${import.meta.env.BASE_URL}images/logo.png`}
                   className="h-20 object-contain md:h-30 pointer-events-none md:self-center"
@@ -39,6 +44,8 @@ export const Footer = () => {
                   {appNavData.map((item) => (
                     <li key={item.url}>
                       <NavLink
+                        title={`Ir a página de ${item.name}`}
+                        aria-label={`Ir a página de ${item.name}`}
                         to={item.url}
                         className={({ isActive }) => `hover:underline
                     ${isActive ? 'text-primary p-0 m-0' : ' text-gray-400'}
@@ -59,6 +66,8 @@ export const Footer = () => {
                     <li key={contact.type}>
                       <Link
                         to={contact.href}
+                        title={`${contact.name} de la academia`}
+                        aria-label={`${contact.name} de la academia`}
                         className={`hover:underline group flex justify-center ${
                           contact.type === 'location' ? '' : 'items-center'
                         } gap-2 md:justify-start`}
@@ -92,7 +101,7 @@ export const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener, noreferrer, nofollow"
-                  title={`Abrir ${social.name}`}
+                  title={`Ir a ${social.name} de la academia`}
                   aria-label="Abrir red social en otra ventana"
                   className="text-gray-500 dark:hover:text-white transition-colors duration-500"
                 >

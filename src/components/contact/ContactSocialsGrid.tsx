@@ -15,6 +15,8 @@ export const ContactSocialsGrid = ({
           href={social.url}
           target="_blank"
           rel="noopener noreferrer"
+          title={`Ir a ${social.name} de la academia`}
+          aria-label={`Ir a ${social.name} de la academia`}
           className="flex items-center gap-2 py-2 px-4 rounded-lg bg-gray-dark hover:bg-[oklch(0.25_0.02_274.75)] transition-colors text-gray-200"
         >
           <social.icon className="h-5 w-5" style={{ color: social.color }} />

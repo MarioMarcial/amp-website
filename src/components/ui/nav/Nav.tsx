@@ -18,6 +18,8 @@ export const Nav = () => {
         <Link
           to="/"
           className="flex items-center space-x-2 rtl:space-x-reverse"
+          title="Ir a página de inicio"
+          aria-label="Ir a página de inicio"
         >
           <img
             src={`${import.meta.env.BASE_URL}images/logo.png`}
@@ -51,6 +53,8 @@ export const Nav = () => {
               <li key={navItem.name}>
                 <NavLink
                   to={navItem.url}
+                  title={`Ir a página de ${navItem.name}`}
+                  aria-label={`Ir a página de ${navItem.name}`}
                   className={({
                     isActive,
                   }) => `block p-0 rounded-sm border-0 transition-colors duration-300
@@ -83,6 +87,8 @@ export const Nav = () => {
               <li key={navItem.name}>
                 <NavLink
                   to={navItem.url}
+                  title={`Ir a página de ${navItem.name}`}
+                  aria-label={`Ir a página de ${navItem.name}`}
                   className={({ isActive }) =>
                     `block p-3 transition-colors duration-300 focus:border-none ${
                       isActive

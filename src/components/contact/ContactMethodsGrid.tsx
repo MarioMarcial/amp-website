@@ -20,6 +20,7 @@ export const ContactMethodsGrid = ({
             {!['location', 'schedule'].includes(contact.type) && (
               <a
                 href={contact.href}
+                title={`${contact.name}`}
                 className="font-medium text-gray-300 hover:underline hover:text-primary-100 transition-colors"
               >
                 {contact.label}

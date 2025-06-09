@@ -30,7 +30,7 @@ export const Button = ({
     `${fontBold ? 'font-bold' : 'font-medium'}`
   );
   return (
-    <Link to={url} className={className}>
+    <Link to={url} className={className} title={`Ir a ${label}`}>
       {Icon && <Icon className="w-5 h-5" />}
       {label}
     </Link>

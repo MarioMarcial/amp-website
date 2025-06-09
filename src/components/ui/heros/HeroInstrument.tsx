@@ -39,6 +39,8 @@ export const HeroInstrument = ({
         {prevInstrument && (
           <Link
             to={`/instrumentos/${prevInstrument.id}`}
+            title="Mostrar instrumento anterior"
+            aria-label="Ir a instrumento anterior"
             className="p-3 rounded-lg text-sm text-secondary font-bold border-2 border-secondary-400 focus:outline-none focus:ring-3 bg-gray-dark/40 transition-colors duration-200 hover:bg-secondary-300 focus:ring-secondary-500 hover:text-white"
           >
             <MdOutlineArrowBackIosNew />
@@ -55,6 +57,8 @@ export const HeroInstrument = ({
         {nextInstrument && (
           <Link
             to={`/instrumentos/${nextInstrument.id}`}
+            title="Mostrar instrumento siguiente"
+            aria-label="Ir a instrumento siguiente"
             className="p-3 rounded-lg text-sm text-secondary font-bold border-2 border-secondary-400 focus:outline-none focus:ring-3 bg-gray-dark/40 transition-colors duration-200 hover:bg-secondary-300 focus:ring-secondary-500 hover:text-white"
           >
             <MdOutlineArrowForwardIos />

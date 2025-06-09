@@ -21,6 +21,8 @@ export const AgesTabGrid = () => {
                 : `bg-transparent text-gray-400`
             }`}
             onClick={() => setCurrentTab({ ...category })}
+            aria-label={`Mostrar categoría ${category.category.toLowerCase()}`}
+            title={`Mostrar categoría ${category.category.toLowerCase()}`}
           >
             {category.category}
           </button>

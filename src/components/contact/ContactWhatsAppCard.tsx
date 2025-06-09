@@ -21,6 +21,8 @@ export const ContactWhatsAppCard = () => {
               href="https://wa.me/522221066291"
               target="_blank"
               rel="noopener noreferrer"
+              title="Abrir chat en WhatsApp"
+              aria-label="Abrir chat en WhatsApp"
               className="inline-flex items-center gap-2 py-2 px-4 rounded-lg bg-green-500 hover:bg-green-600 text-white transition-colors"
             >
               <span>Enviar mensaje</span>
