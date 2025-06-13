@@ -10,9 +10,10 @@ import {
   Container,
   HeadingSection,
   Button,
-  HeroInstrument,
+  Hero,
+  HeroContentInstrument,
+  TabAges,
 } from '../components/ui';
-import { AgesTabGrid } from '../components/ages';
 
 // Icons
 import { MdDateRange } from 'react-icons/md';
@@ -44,17 +45,18 @@ export default function Instrument() {
         <meta name="description" content={instrument.description} />
       </Helmet>
 
-      <HeroInstrument
-        title={
-          <>
-            Clases de <span className="text-primary">{instrument.name}</span>
-          </>
-        }
-        description="¡Desarrolla tu talento!"
-        image={`${instrument.id}.jpg`}
-        prevInstrument={prevInstrument}
-        nextInstrument={nextInstrument}
-      />
+      <Hero bgImage={`${instrument.id}.jpg`} type="instrument">
+        <HeroContentInstrument
+          title={
+            <>
+              Clases de <span className="text-primary">{instrument.name}</span>
+            </>
+          }
+          description="¡Desarrolla tu talento!"
+          prevInstrument={prevInstrument}
+          nextInstrument={nextInstrument}
+        />
+      </Hero>
 
       <Container as="section">
         {/* Image & Description */}
@@ -130,7 +132,7 @@ export default function Instrument() {
           responsiveClasses="md:text-center"
         />
 
-        <AgesTabGrid />
+        <TabAges />
       </Container>
     </>
   );

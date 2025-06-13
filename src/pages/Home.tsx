@@ -1,6 +1,11 @@
 import { Helmet } from '@dr.pogodin/react-helmet';
 
-import { HeadingSection, Container, HeroHome } from '../components/ui';
+import {
+  HeadingSection,
+  Container,
+  Hero,
+  HeroContentHome,
+} from '../components/ui';
 import { InstrumentsGrid, InstrumentsHeader } from '../components/instruments';
 import { TestimonialsLayout } from '../components/testimonials';
 import { HomeExploreGrid } from '../components/home/HomeExploreGrid';
@@ -16,19 +21,21 @@ export default function Home() {
         />
       </Helmet>
 
-      <HeroHome
-        title={
-          <>
-            Academia de&nbsp;
-            <span className="bg-linear-to-r from-primary from-40% to-secondary bg-clip-text text-transparent">
-              música&nbsp;
-            </span>
-            en Puebla
-          </>
-        }
-        description="Da el primer paso. En Arte Musical Puebla te ofrecemos el ambiente perfecto para desarrollar tu talento al máximo."
-        image="cantante.png"
-      />
+      <Hero bgImage="hero-inicio.jpg">
+        <HeroContentHome
+          title={
+            <>
+              Academia de&nbsp;
+              <span className="bg-linear-to-r from-primary from-40% to-secondary bg-clip-text text-transparent">
+                música&nbsp;
+              </span>
+              en Puebla
+            </>
+          }
+          description="Da el primer paso. En Arte Musical Puebla te ofrecemos el ambiente perfecto para desarrollar tu talento al máximo."
+          thumbnailImage="cantante.png"
+        />
+      </Hero>
 
       {/* Instruments */}
       <Container as="section" hasBorderBottom={false} size="max-w-screen-md">

@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { ageCategoriesData } from '../../data';
-import type { AgeCategory } from './../../types/ageCategory.types';
-import { Button } from './../ui';
+import { ageCategoriesData } from './../../../data';
+import type { AgeCategory } from './../../../types';
+import { Button } from './../../ui';
 import { MdDateRange } from 'react-icons/md';
 
-export const AgesTabGrid = () => {
+export const TabAges = () => {
   const [currentTab, setCurrentTab] = useState<AgeCategory>(
     ageCategoriesData[1]
   );

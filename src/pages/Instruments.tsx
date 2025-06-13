@@ -1,5 +1,5 @@
 import { Helmet } from '@dr.pogodin/react-helmet';
-import { Container, HeroPage } from '../components/ui';
+import { Container, Hero, HeroContent } from '../components/ui';
 import { InstrumentsGrid, InstrumentsHeader } from '../components/instruments';
 
 export default function Instruments() {
@@ -13,15 +13,16 @@ export default function Instruments() {
         />
       </Helmet>
 
-      <HeroPage
-        title={
-          <>
-            Encuentra tu <span className="text-primary">instrumento</span>
-          </>
-        }
-        description="Elige un instrumento y comienza a desarrollar tu talento"
-        image="hero-instrumentos.jpg"
-      />
+      <Hero bgImage="hero-instrumentos.jpg">
+        <HeroContent
+          title={
+            <>
+              Encuentra tu <span className="text-primary">instrumento</span>
+            </>
+          }
+          description="Elige un instrumento y comienza a desarrollar tu talento"
+        />
+      </Hero>
 
       <Container size="max-w-screen-md">
         <InstrumentsHeader />

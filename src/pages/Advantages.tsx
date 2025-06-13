@@ -1,8 +1,13 @@
 import { Helmet } from '@dr.pogodin/react-helmet';
 import { AdvantagesGrid } from '../components/advantages';
-import { AgesTabGrid } from '../components/ages';
 import { TestimonialsLayout } from '../components/testimonials';
-import { HeroPage, HeadingSection, Container } from '../components/ui';
+import {
+  Hero,
+  HeroContent,
+  HeadingSection,
+  Container,
+  TabAges,
+} from '../components/ui';
 import { methodologyFeatures } from '../data';
 import { FaRegCheckCircle } from 'react-icons/fa';
 
@@ -17,16 +22,17 @@ export default function Advantages() {
         />
       </Helmet>
 
-      <HeroPage
-        title={
-          <>
-            ¿Por qué deberías <span className="text-primary">unirte</span> a
-            AMP?
-          </>
-        }
-        description="Descubre las ventajas de estudiar con nosotros"
-        image="hero-ventajas.jpg"
-      />
+      <Hero bgImage="hero-ventajas.jpg">
+        <HeroContent
+          title={
+            <>
+              ¿Por qué deberías <span className="text-primary">unirte</span> a
+              AMP?
+            </>
+          }
+          description="Descubre las ventajas de estudiar con nosotros"
+        />
+      </Hero>
 
       <Container as="section">
         <HeadingSection as="h2" title="Te Ofrecemos" textAlign="text-center" />
@@ -76,7 +82,7 @@ export default function Advantages() {
           title="Enfoque Por Edad"
           textAlign="text-center"
         />
-        <AgesTabGrid />
+        <TabAges />
       </Container>
 
       <TestimonialsLayout />

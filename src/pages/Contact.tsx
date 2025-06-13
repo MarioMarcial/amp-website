@@ -1,6 +1,6 @@
 import { Helmet } from '@dr.pogodin/react-helmet';
 import { contactMethodsData, socialMediaData } from '../data';
-import { HeroPage, Container, HeadingSection } from '../components/ui';
+import { Hero, HeroContent, Container, HeadingSection } from '../components/ui';
 import {
   ContactFAQGrid,
   ContactLeafletMap,
@@ -21,16 +21,17 @@ export default function Contact() {
         />
       </Helmet>
 
-      <HeroPage
-        title={
-          <>
-            ¡Obtén tu <span className="text-primary">clase</span> muestra sin
-            costo!
-          </>
-        }
-        description="Pregunta por la promoción del mes y agenda tu clase muestra sin costo."
-        image="hero-contacto.jpg"
-      />
+      <Hero bgImage="hero-contacto.jpg">
+        <HeroContent
+          title={
+            <>
+              ¡Obtén tu <span className="text-primary">clase</span> muestra sin
+              costo!
+            </>
+          }
+          description="Pregunta por la promoción del mes y agenda tu clase muestra sin costo."
+        />
+      </Hero>
 
       <Container as="section">
         <div className="grid space-y-10 md:space-y-0 md:grid-cols-2 md:gap-x-10">
