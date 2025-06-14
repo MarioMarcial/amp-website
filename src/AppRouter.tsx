@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate, HashRouter } from 'react-router';
-import HomeLayout from './layouts/HomeLayout';
+import Layout from './layouts/Layout';
 import { Spinner } from './components/ui';
 
 const Home = lazy(() => import('./pages/Home'));
@@ -14,7 +14,7 @@ export const AppRouter = () => {
     <HashRouter>
       <Suspense fallback={<Spinner />}>
         <Routes>
-          <Route path="/" element={<HomeLayout />}>
+          <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="instrumentos" element={<Instruments />} />
             <Route path="instrumentos/:id" element={<Instrument />} />
